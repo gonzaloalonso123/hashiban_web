@@ -4,26 +4,37 @@
   box-sizing: border-box;
   font-family: font;
   scroll-behavior: smooth;
+  color: #fff;
 }
 
 .main {
   min-height: 100vh;
-  background-color: #000000;
+  background:
+	linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+	linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+	linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+	linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+	linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+	linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+	background-color: #131313;
+	background-size: 20px 20px;
 }
 
 .item {
   min-height: 40rem;
-  width: 30rem;
-  min-width: 30rem;
-  padding: 40px;
+  /* width: 30rem; */
+  /* min-width: 30rem; */
+  /* margin: 0; */
+  padding: 2%;
 }
 
 .item img{
   cursor: grab;
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
   border-radius: 2rem;
   pointer-events: none;
+  height: 50vh;
 }
 
 .inner-carousel{
@@ -37,16 +48,64 @@
   overflow: hidden;
 }
 
-.description {
-  color: white;
+.introduction-section {
+	background: linear-gradient(to top, transparent, #000000);
+}
+
+.introduction {
+	padding-top: 100px;
+  /* color: white; */
   text-shadow: 2px 5px #000000;
   text-align: left;
   font-family: font;
-  font-size: 35px;
+  font-size: min(3vw, 35px);
   width: 50%;
-  margin: 20px auto;
+  margin: auto;
   line-height: 50px;
   z-index: 100;
+}
+
+.slider {
+	margin-top: 200px;
+} 
+
+.title-slider {
+  /* color: #FFF886; */
+  text-shadow: 5px 10px #000000;
+  text-align: center;
+  font-family: font;
+  font-size: min(5vw, 50px);
+  width: 50%;
+  margin: auto;
+  line-height: 50px;
+  z-index: 100;
+  margin-bottom: 50px;
+}
+
+.description-section {
+	background: linear-gradient(to top, transparent, #000000);
+}
+
+.description {
+	padding-top: 100px;
+  /* color: white; */
+  text-shadow: 2px 5px #000000;
+  text-align: justify;
+  font-family: font;
+  font-size: min(1.5vw, 20px);
+  width: 50%;
+  margin: auto;
+  line-height: 50px;
+  z-index: 100;
+}
+
+.video-section {
+	margin-top: 200px;
+	width: 100%;
+}
+
+.video {
+	text-align: center;
 }
 
 @font-face {
@@ -59,7 +118,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 30px 100px;
+  padding: 30px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,7 +150,7 @@ header ul li a {
   text-decoration: none;
   padding: 6px 15px;
   color: #fff;
-  font-size: 2em;
+  font-size: min(3vw, 36px);
   border-radius: 20px;
 }
 
@@ -106,6 +165,8 @@ section {
   width: 100%;
   height: 100vh;
   padding: 100px;
+  overflow: hidden;
+  background-color: #000000;
 }
 
 section::before{

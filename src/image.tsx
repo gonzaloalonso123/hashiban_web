@@ -19,12 +19,10 @@ function Image() {
 
   return (
     <section>
-        <img src={TabernImg} id ='tabern' style={{ opacity : 1 - offsetY / 1000}}/>
-        <img src={DemonImg} id ='demon' style={{ transform : `translateX(${offsetY * 0.1}px)`}}/>
-        <img src={WallImg} id ='wall' 
-        //style={{ transform : `translateX(${-offsetY * 0.05}px)`}}
-        />
-        <img src={BatImg} id ='bat' style={{ transform : `translateX(${-offsetY * 0.1}px)`}}/>
+        <img src={TabernImg} alt='' id ='tabern' style={{ opacity : 1 - offsetY / 1000}}/>
+        <img src={DemonImg} alt='' id ='demon' style={{ transform : `translateX(${offsetY * 0.1}px)`}}/>
+        <img src={WallImg} alt='' id ='wall' />
+        <img src={BatImg} alt='' id ='bat' style={{ transform : `translateX(${-offsetY * 0.1}px)`}}/>
     </section>
   );
 }

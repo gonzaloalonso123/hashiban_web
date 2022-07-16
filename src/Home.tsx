@@ -5,14 +5,18 @@ import './App.css';
 import Header from './header';
 import Image from './image';
 import Slider from './slider';
+import Introduction from './introduction';
+import Video from './video';
 
 function Home() {
   return (
     <div className='main'>
       <Header />
       <Image />
-      <DescriptionBox/>
+      <Introduction/>
+	  <Video/>
       <Slider/>
+	  <DescriptionBox/>
     </div>
   );
 }
