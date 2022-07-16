@@ -4,6 +4,7 @@ import { useState } from 'react';
 import './App.css';
 import Header from './header';
 import Image from './image';
+import Slider from './slider';
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <Header />
       <Image />
       <DescriptionBox/>
+      <Slider/>
     </div>
   );
 }

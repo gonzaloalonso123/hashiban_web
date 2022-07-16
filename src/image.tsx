@@ -19,7 +19,7 @@ function Image() {
 
   return (
     <section>
-        <img src={TabernImg} id ='tabern'/>
+        <img src={TabernImg} id ='tabern' style={{ opacity : 1 - offsetY / 1000}}/>
         <img src={DemonImg} id ='demon' style={{ transform : `translateX(${offsetY * 0.1}px)`}}/>
         <img src={WallImg} id ='wall' 
         //style={{ transform : `translateX(${-offsetY * 0.05}px)`}}
