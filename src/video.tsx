@@ -6,7 +6,7 @@ function Video() {
   return (
 	<div className='video-section'>
 		<div className='video'>
-			<img src={frame} alt=''/>
+			<img className='frame' src={frame} alt=''/>
 		</div>
 	</div>
   );
