@@ -16,7 +16,7 @@ function Slider() {
 
     return (
 		<div className='slider'>
-			<p className='title-slider'>EXPOSITOR DE OBJETOS</p>
+			<p className='title-slider'>Expositor de objetos</p>
 			<motion.div ref={carousel} className='carousel' whileTap = {{cursor: "grabbing" }}>
 				<motion.div
 					drag='x'
