@@ -8,7 +8,7 @@ function DescriptionBox() {
 		<p>
 			En el antiguo reino de Hashiban, en una acogedora taberna, 
 			Se deleitan con cerveza unos amables trasgos.
-			Arkuk, que es la simpática camarera, tararea una balada ancestral con gesto despreocupado.
+			Arkuk, que es la simpática camarera, tararea una balada ancestral con gesto despreocupado. <br/>
 			Más en el sótano de tal taberna, la mayor subasta clandestina de todo el reino esta teniendo lugar. 
 			En ella, un grupo de avariciosos mercaderes y refinados coleccionistas 
 			consumen sus ahorros, tratando de obtener los objetos que tanto ansían. 

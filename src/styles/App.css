@@ -93,9 +93,10 @@
 }
 
 .slider-text {
-	width: 250px;
+	width: 280px;
 	color: white;
 	padding: 30px auto;
+	text-align: justify;
 }
 
 
@@ -170,7 +171,7 @@ header ul {
 
 header ul li {
 	list-style: none;
-	transform: translateY(8px);
+	transform: translateY(35px);
 	margin-left: 20px;
 }
 
