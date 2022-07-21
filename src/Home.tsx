@@ -7,20 +7,24 @@ import Introduction from './components/introduction';
 import Video from './components/video';
 import DescriptionCarousel from './components/description-carousel';
 import JugarButton from './components/jugarButton';
+import { useState } from 'react';
 
 function Home() {
-  return (
-    <div className='main'>
-      <Header />
-      <Image />
-      <Introduction />
-      <DescriptionCarousel />
-      <Video />
-      <Slider />
-      <JugarButton />
-      <DescriptionBox />
-    </div>
-  );
+
+	const [currentDescription, setCurrentDescription] = useState(-1)
+
+	return (
+		<div className='main'>
+			<Header />
+			<Image />
+			<Introduction />
+			<DescriptionCarousel setCurrentDescription={setCurrentDescription} currentDescription={currentDescription}/>
+			<Video />
+			{/* <Slider /> */}
+			<JugarButton />
+			<DescriptionBox />
+		</div>
+	);
 }
 
 export default Home;

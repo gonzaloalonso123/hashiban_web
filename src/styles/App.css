@@ -44,9 +44,16 @@
 }
 
 .description-carousel {
-	margin: 100px auto;
+	margin: 5em auto;
 	width: 60%;
 	display: flex;
+}
+
+.description-carousel-text {
+	margin: auto;
+	width: 30%;
+	height: 5em;
+	text-align: center;
 }
 
 .item img {
@@ -72,9 +79,9 @@
 .introduction {
 	padding-top: 100px;
 	text-shadow: 2px 5px #000000;
-	text-align: left;
-	font-size: min(3vw, 35px);
-	width: 50%;
+	text-align: justify;
+	font-size: min(1.5vw, 18px);
+	width: 35%;
 	margin: auto;
 	line-height: 50px;
 	z-index: 100;
@@ -93,7 +100,7 @@
 }
 
 .slider-text {
-	width: 280px;
+	width: 100%;
 	color: white;
 	padding: 30px auto;
 	text-align: justify;
@@ -166,7 +173,7 @@ header .logo {
 header ul {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-fs: center;
 }
 
 header ul li {

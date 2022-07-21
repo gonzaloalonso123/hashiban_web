@@ -26,7 +26,7 @@ function Slider() {
 					{cards.map((card, i) => {
 						return (
 							<motion.div className='item'>
-								<SliderCard image={card} description={""}/>
+								{/* <SliderCard image={card}/> */}
 							</motion.div>
 						);
 					})}

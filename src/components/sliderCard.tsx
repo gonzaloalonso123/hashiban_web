@@ -2,17 +2,26 @@ import React from "react";
 
 
 interface IProps {
-    image: string
-    description: string
+	image: string,
+	setCurrentDescription: React.Dispatch<React.SetStateAction<any>>,
+	id: number
 }
 
-const SliderCard = ({image, description}: IProps) => {
-   return (
-        <div className="slider-card">
-            <img src={image} alt="" />
-            <p className="slider-text">{description}</p>
-        </div>
-   );
+const SliderCard = ({ image, setCurrentDescription, id }: IProps) => {
+
+	const buttonMouseOverHandler = () => {
+		setCurrentDescription(id);
+	};
+
+	const buttonMouseOutHandler = () => {
+		setCurrentDescription(undefined);
+	};
+
+	return (
+		<div className="slider-card item" onMouseOver={buttonMouseOverHandler} onMouseOut={buttonMouseOutHandler}>
+			<img src={image} alt="" />
+		</div>
+	);
 }
 
 export default SliderCard;
