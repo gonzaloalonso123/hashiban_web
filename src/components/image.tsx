@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
-import BatImg from './images/bat.png';
-import DemonImg from './images/demon.png';
-import WallImg from './images/wall.png';
-import TabernImg from './images/tabern.png';
-import Lights from './images/lights4.png';
-import { transform } from 'typescript';
+import '../styles/App.css';
+import BatImg from '../images/bat.png';
+import DemonImg from '../images/demon.png';
+import WallImg from '../images/wall.png';
+import TabernImg from '../images/tabern.png';
+import Lights from '../images/lights4.png';
 
 
 function Image() {

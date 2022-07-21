@@ -1,6 +1,5 @@
-import React from 'react';
-import './App.css';
-import frame from './images/frame.png';
+import '../styles/App.css';
+import frame from '../images/frame.png';
 
 function Video() {
   return (

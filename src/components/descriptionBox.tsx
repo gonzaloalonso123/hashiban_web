@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../styles/App.css';
 
 function DescriptionBox() {
   return (
@@ -15,7 +15,8 @@ function DescriptionBox() {
 			Para ello, no dudan en usar el engaño, la persuasión, y la codicia como arma. 
 			Todos los participantes son inteligentes criaturas que llevan toda una vida dedicada al comercio y practicando la estafa: han venido con intenciones de llevarse todo el botín. 
 			Pero solo uno de ellos se hará con el monopolio, convirtiéndose en el señor de la subasta de Hashiban.
-		</p>
+		</p> <br/><br/>
+		<a href = "#" className='linkButton'>Como jugar</a>
 		</div>
 	</div>
   );

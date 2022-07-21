@@ -1,22 +1,24 @@
-import React from 'react';
-import DescriptionBox from './descriptionBox';
-import { useState } from 'react';
-import './App.css';
-import Header from './header';
-import Image from './image';
-import Slider from './slider';
-import Introduction from './introduction';
-import Video from './video';
+import DescriptionBox from './components/descriptionBox';
+import './styles/App.css';
+import Header from './components/header';
+import Image from './components/image';
+import Slider from './components/slider';
+import Introduction from './components/introduction';
+import Video from './components/video';
+import DescriptionCarousel from './components/description-carousel';
+import JugarButton from './components/jugarButton';
 
 function Home() {
   return (
     <div className='main'>
       <Header />
       <Image />
-      <Introduction/>
-	  <Video/>
-      <Slider/>
-	  <DescriptionBox/>
+      <Introduction />
+      <DescriptionCarousel />
+      <Video />
+      <Slider />
+      <JugarButton />
+      <DescriptionBox />
     </div>
   );
 }
