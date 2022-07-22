@@ -163,17 +163,13 @@ header {
 }
 
 header .logo {
-	text-decoration: none;
-	font-weight: 700;
-	font-size: 2em;
-	text-transform: uppercase;
-	letter-spacing: 2px;
+	width: 20%;
+	height: 20%;
 }
 
 header ul {
 	display: flex;
 	justify-content: center;
-	align-fs: center;
 }
 
 header ul li {
