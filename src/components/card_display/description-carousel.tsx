@@ -1,8 +1,7 @@
-import { motion } from "framer-motion";
-import '../styles/App.css';
-import cards from '../content/IntroductionImages';
+import './card_display.css';
+import cards from '../../content/IntroductionImages';
 import SliderCard from "./sliderCard";
-import descriptions from "../content/descriptions";
+import descriptions from "../../content/descriptions";
 
 interface IProps {
 	setCurrentDescription: React.Dispatch<React.SetStateAction<any>>,
@@ -21,7 +20,7 @@ const DescriptionCarousel = ({ setCurrentDescription, currentDescription }: IPro
 				})}
 
 			</div>
-			<div className="description-carousel-text">{currentDescription !== -1 ? descriptions[currentDescription] : ""}</div>
+			<div className= {currentDescription !== -1 ? "description-carousel-text" : "description-carousel-text invisible"}>{currentDescription !== -1 ? descriptions[currentDescription] : ""}</div>
 		</div>
 	);
 }

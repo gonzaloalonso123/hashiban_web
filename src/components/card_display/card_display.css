@@ -1,0 +1,35 @@
+.description-carousel {
+	margin: 5em auto;
+	width: 60%;
+	display: flex;
+}
+
+.description-carousel-text {
+	margin: auto;
+	width: 40%;
+	height: 5em;
+	text-align: center;
+	border : 2px solid #e4c95f;
+	box-shadow: 2px 1px #a0851b;
+	color: black;
+	border-radius: 1rem;
+	padding: 1rem;
+	background: linear-gradient(207deg, #fafedd, #ad9a7d);
+	transition: 1s;
+}
+
+.description-carousel-text.invisible {
+	opacity: 0;
+}
+
+.slider-card {
+	margin: 10px 20px;
+	border-radius: 5%;
+	display: block;
+	opacity: 0.6;
+}
+
+.slider-card:hover {
+	opacity: 1;
+	transform: scale(1.02);
+}

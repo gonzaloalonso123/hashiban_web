@@ -1,0 +1,14 @@
+.introduction-section {
+	background: linear-gradient(to top, transparent, #000000);
+}
+
+.introduction {
+	padding-top: 100px;
+	text-shadow: 2px 5px #000000;
+	text-align: justify;
+	font-size: min(1.5vw, 18px);
+	width: 40%;
+	margin: auto;
+	line-height: 50px;
+	z-index: 100;
+}

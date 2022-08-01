@@ -1,0 +1,54 @@
+header {
+	position: absolute;
+	width: 90%;
+	padding: 2% 5%;
+	display: flex;
+	justify-content: space-between;
+	z-index: 10000;
+}
+
+header .logo {
+	width: 20%;
+	height: 20%;
+}
+
+header ul {
+	display: flex;
+	justify-content: center;
+}
+
+header ul li {
+	list-style: none;
+	transform: translateY(35px);
+	margin-left: 20px;
+}
+
+.linkButton {
+	text-decoration: none;
+	font-size: min(2vw, 24px);
+	border-radius: 20px;
+	padding: 5px;
+}
+
+.linkButton:hover,
+.linkButtonActive {
+	text-decoration: none;
+	font-size: min(2vw, 24px);
+	border-radius: 20px;
+	padding: 5px;
+	background: #fff;
+	color: #7c4b07
+}
+
+header ul li a {
+	text-decoration: none;
+	font-size: min(3vw, 36px);
+	border-radius: 20px;
+	padding: 5px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+	background: #fff;
+	color: #7c4b07
+}

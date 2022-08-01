@@ -1,12 +1,10 @@
-import DescriptionBox from './components/descriptionBox';
+import DescriptionBox from './components/hashiban_lore/descriptionBox';
 import './styles/App.css';
-import Header from './components/header';
-import Image from './components/image';
-import Slider from './components/slider';
-import Introduction from './components/introduction';
-import Video from './components/video';
-import DescriptionCarousel from './components/description-carousel';
-import JugarButton from './components/jugarButton';
+import Header from './components/header/header';
+import Image from './components/image_top/image';
+import Introduction from './components/introductory_text/introduction';
+import Video from './components/video/video';
+import DescriptionCarousel from './components/card_display/description-carousel';
 import { useState } from 'react';
 
 function Home() {
@@ -20,8 +18,6 @@ function Home() {
 			<Introduction />
 			<DescriptionCarousel setCurrentDescription={setCurrentDescription} currentDescription={currentDescription}/>
 			<Video />
-			{/* <Slider /> */}
-			<JugarButton />
 			<DescriptionBox />
 		</div>
 	);

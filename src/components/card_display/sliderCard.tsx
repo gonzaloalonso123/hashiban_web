@@ -14,7 +14,7 @@ const SliderCard = ({ image, setCurrentDescription, id }: IProps) => {
 	};
 
 	const buttonMouseOutHandler = () => {
-		setCurrentDescription(undefined);
+		setCurrentDescription(-1);
 	};
 
 	return (

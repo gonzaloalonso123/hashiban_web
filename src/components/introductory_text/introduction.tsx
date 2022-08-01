@@ -1,5 +1,4 @@
-import React from 'react';
-import '../styles/App.css';
+import './introductory_text.css';
 
 function Introduction() {
   return (

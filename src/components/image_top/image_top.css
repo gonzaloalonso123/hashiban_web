@@ -1,0 +1,73 @@
+section {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #000000;
+	background: black;
+}
+
+section::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: linear-gradient(to top, #000000, transparent);
+	z-index: 1000;
+}
+
+section img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+section img#wall {
+	pointer-events: none;
+	position: fixed;
+	z-index: 2000;
+}
+
+section img#bat {
+	z-index: 5;
+}
+
+section img#lights {
+	animation: opacity-in 4s infinite;
+}
+
+section img#tabern {
+	animation: opacity-breathe 4s infinite;
+}
+
+@keyframes opacity-in {
+	0% {
+		opacity: 0.2;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0.2;
+	}
+}
+
+@keyframes opacity-breathe {
+	0% {
+		opacity: 0.85
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0.85;
+	}
+}

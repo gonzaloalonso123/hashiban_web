@@ -1,5 +1,5 @@
-import '../styles/App.css';
-import frame from '../images/frame.png';
+import './video.css';
+import frame from '../../images/frame.png';
 
 function Video() {
   return (

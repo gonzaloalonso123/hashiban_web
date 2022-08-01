@@ -1,0 +1,13 @@
+.video-section {
+	margin-top: 100px;
+	width: 100%;
+}
+
+.video {
+	display: flex;
+	justify-content: center;
+}
+
+.frame {
+	width: 50%;
+}
