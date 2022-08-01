@@ -51,7 +51,7 @@
 
 .description-carousel-text {
 	margin: auto;
-	width: 30%;
+	width: 40%;
 	height: 5em;
 	text-align: center;
 }
@@ -81,7 +81,7 @@
 	text-shadow: 2px 5px #000000;
 	text-align: justify;
 	font-size: min(1.5vw, 18px);
-	width: 35%;
+	width: 40%;
 	margin: auto;
 	line-height: 50px;
 	z-index: 100;
@@ -180,13 +180,17 @@ header ul li {
 
 .linkButton {
 	text-decoration: none;
-	font-size: min(3vw, 36px);
+	font-size: min(2vw, 24px);
 	border-radius: 20px;
 	padding: 5px;
 }
 
 .linkButton:hover,
 .linkButtonActive {
+	text-decoration: none;
+	font-size: min(2vw, 24px);
+	border-radius: 20px;
+	padding: 5px;
 	background: #fff;
 	color: #7c4b07
 }
