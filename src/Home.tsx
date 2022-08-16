@@ -1,24 +1,25 @@
-import DescriptionBox from './components/hashiban_lore/descriptionBox';
+import DescriptionBox from './components/hashiban_lore/DescriptionBox';
 import './styles/App.css';
-import Header from './components/header/header';
-import Image from './components/image_top/image';
-import Introduction from './components/introductory_text/introduction';
-import Video from './components/video/video';
-import DescriptionCarousel from './components/card_display/description-carousel';
+import Header from './components/header/Header';
+import Image from './components/image_top/Image';
+import Introduction from './components/introductory_text/Introduction';
+import Video from './components/video/Video';
+import DescriptionCarousel from './components/card_display/Description-carousel';
 import { useState } from 'react';
+import NavBar from './components/buy_tab/buy-tab';
 
 function Home() {
 
-	const [currentDescription, setCurrentDescription] = useState(-1)
+	const [buyTab, setBuyTab] = useState(false);
 
 	return (
 		<div className='main'>
-			<Header />
-			<Image />
+			<NavBar setBuyTab = {setBuyTab} buyTab = {buyTab}/>
+			<Header  setBuyTab = {setBuyTab} buyTab = {buyTab}/>
+			<Image/>
 			<Introduction />
-			<DescriptionCarousel setCurrentDescription={setCurrentDescription} currentDescription={currentDescription}/>
+			<DescriptionCarousel />
 			<Video />
-			<DescriptionBox />
 		</div>
 	);
 }

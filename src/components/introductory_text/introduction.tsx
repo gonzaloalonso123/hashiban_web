@@ -5,8 +5,8 @@ function Introduction() {
 	<div className='introduction-section'>
 		<div className='introduction'>
 		<p>
-			La Subasta de Hashiban es un juego de cartas en el que competirás con tu familia y amigos por obtener los objetos más codiciados del reino. <br/>
-			En esta odisea ambientada en un universo de magia y trasgos, puja, comercia, y engaña para hacerte rico y utiliza tus fajos para ganar la partida.
+			La subasta de Hashiban es un juego de cartas ambientado en un universo de magia y trasgos para amantes de las subastas, la estrategia, y el manejo de fajos.
+
 		</p>
 		</div>
 	</div>

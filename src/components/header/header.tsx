@@ -1,15 +1,51 @@
-import './header.css';
-import Logo from '../../images/logo.png';
+import "./header.css";
+import Logo from "../../images/logo.png";
+import { useEffect, useState } from "react";
 
-function Header() {
+interface props {
+  setBuyTab: any;
+  buyTab: boolean;
+}
+
+function Header({ setBuyTab, buyTab }: props) {
+  const [blackHeader, setBlackHeader] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > document.body.scrollHeight / 5) {
+      console.log(
+        "scrolly: " +
+          window.scrollY +
+          " window.outerHeight:" +
+          document.body.scrollHeight
+      );
+      setBlackHeader(true);
+    } else {
+      setBlackHeader(false);
+    }
+  };
+
+  const handleBuyBar = () => setBuyTab(!buyTab);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header>
-      <img src = {Logo} alt = "" className='logo'/>
-        <ul>
-          <li><a className="linkButtonActive">Comprar</a></li>
-          <li><a className="linkButton" href='#'>Sobre nosotros</a></li>
-          <li><a className="linkButton" href='#'>Contacto</a></li>
-        </ul>
+    <header
+      id="header"
+      style={{ backgroundColor: blackHeader ? "#111111" : "" }}
+    >
+      <div>
+        <a className="logo">La subasta de Hashiban</a>
+      </div>
+      <nav>
+        <a onClick={handleBuyBar}>
+          Comprar
+        </a>
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Instrucciones</a>
+      </nav>
     </header>
   );
 }

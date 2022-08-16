@@ -1,54 +1,59 @@
 header {
-	position: absolute;
-	width: 90%;
-	padding: 2% 5%;
-	display: flex;
+	position: fixed;
+	width: 100%;
+	padding-top: 1%;
+	padding-bottom: 1%;
 	justify-content: space-between;
-	z-index: 10000;
+	align-items: center;
+	z-index: 750;
+	transition: 0.6s;
+}
+
+/* phones */
+@media screen and (max-width:1158px){
+	header{
+		display: inline-block;
+		text-align: center;
+	}
+	header nav a {
+		line-height: 1.6em;
+	}
+}
+
+/* pc */
+@media screen and (min-width:1158px){
+	header{
+		display: flex;
+	}
+	header .logo{
+		margin-left: 20px;
+	}
 }
 
 header .logo {
-	width: 20%;
-	height: 20%;
+	display: block;
+	font-size: clamp(4rem, 2.5vw, 6rem); 
+	text-shadow: 1px 1px black;
 }
 
-header ul {
+header nav {
 	display: flex;
-	justify-content: center;
+	justify-content: center ;
 }
 
-header ul li {
+header nav a {
+	margin: 5px 2vw;
 	list-style: none;
-	transform: translateY(35px);
-	margin-left: 20px;
+	padding: 0.2vh 10px;
+	text-decoration: none;
+	border-radius: 15px;
+	font-size: clamp(2rem, 2.5vw, 3rem);
 }
 
-.linkButton {
+header nav a:hover,
+header nav a.active {
 	text-decoration: none;
-	font-size: min(2vw, 24px);
-	border-radius: 20px;
-	padding: 5px;
-}
-
-.linkButton:hover,
-.linkButtonActive {
-	text-decoration: none;
-	font-size: min(2vw, 24px);
-	border-radius: 20px;
-	padding: 5px;
 	background: #fff;
-	color: #7c4b07
-}
-
-header ul li a {
-	text-decoration: none;
-	font-size: min(3vw, 36px);
-	border-radius: 20px;
-	padding: 5px;
-}
-
-header ul li a:hover,
-header ul li a.active {
-	background: #fff;
-	color: #7c4b07
+	color: #7c4b07;
+	cursor: pointer;
 }

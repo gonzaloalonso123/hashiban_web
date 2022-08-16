@@ -1,35 +1,123 @@
 .description-carousel {
-	margin: 5em auto;
-	width: 60%;
 	display: flex;
-}
-
-.description-carousel-text {
+	justify-content: center;
+	width: 90%;
 	margin: auto;
-	width: 40%;
-	height: 5em;
+	height: 100%;
 	text-align: center;
-	border : 2px solid #e4c95f;
-	box-shadow: 2px 1px #a0851b;
-	color: black;
-	border-radius: 1rem;
-	padding: 1rem;
-	background: linear-gradient(207deg, #fafedd, #ad9a7d);
-	transition: 1s;
 }
 
-.description-carousel-text.invisible {
-	opacity: 0;
+.arrow{
+	opacity: 0.7;
+	width: 25%;
 }
 
-.slider-card {
-	margin: 10px 20px;
-	border-radius: 5%;
-	display: block;
-	opacity: 0.6;
+.container {
+	border-radius: 2em;
+	background-color: rgba(0, 0, 0, 0.4);
+	width: 90%;
+	margin: auto;
+	padding: 4vw;
+	background: url('../../images/Empty.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
 
-.slider-card:hover {
+.arrow:hover{
 	opacity: 1;
-	transform: scale(1.02);
+	transform: scale(1.05);
+} 
+
+.arrow.left{
+	 margin: auto ;
+	 margin-right: 5px;
 }
+.arrow.right{
+	margin: auto;
+	margin-left: 5px;
+}
+
+.card {
+	width:40%;
+	border-radius: 2em;
+}
+
+.description {
+	display: block;
+}
+
+.description-section {
+	padding:1vw 4vw 2vw 4vw;
+	background: none;
+}
+
+/* .description {
+	padding-top: 5%;
+	text-shadow: 2px 5px #000000;
+	text-align: justify;
+	font-size: 1.2em;
+	width: 70%;
+	z-index: 100;
+	padding-bottom: 5%;
+	border: 2px solid rgba(180, 140, 30, 0.7);
+	box-shadow: 2px 2px rgba();
+	border-radius: 2em;
+	background-image: repeating-linear-gradient(36deg, rgba(122, 69, 24, 0.55), rgba(112, 63, 16, 0.85) 1px, transparent 0px, transparent 2px);
+	background-size: 12px;
+} */
+
+.description {
+	line-height: 1.4em;
+	font-size: clamp(1.6rem, 2.5vw, 2.4rem); 
+	color: white;
+	text-align: justify;
+	text-shadow: 1px 1px black;
+}
+
+.title {
+	color: white;
+	margin-bottom: 2%;
+	text-align: center;
+	text-shadow: 1px 1px black;
+}
+
+h1.title {
+	font-size: 5em;
+	padding-top: 10%;
+	color: white;
+	text-shadow: 1px 1px black;
+	/* color: fff; */
+}
+
+@media screen and (min-width: 1349px) {
+	.container {
+		margin-left: 30%;
+		width: 45%;
+	}
+
+	.description{
+		margin: auto auto;
+		padding: 1% 3% 2% 3%;
+	}
+}
+
+@media screen and (min-width:1080px) and (max-width:1349px) {
+	.container {
+		width: 45%;
+	}
+
+	.description{
+		margin: auto auto;
+		padding: 1% 3% 2% 3%;
+	}
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-width: 1079px) {
+	.description{
+		margin: auto auto;
+		padding: 2% 10% 15% 10%;
+	}
+}
+ 
+

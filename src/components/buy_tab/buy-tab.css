@@ -1,0 +1,106 @@
+.buyArea {
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+
+.titleOfProduct{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-size: 2.5rem;
+}
+
+.itemInfo {
+    padding: 5%;
+}
+
+.product {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin: auto auto;
+    /* border: 2px solid white; */
+    border-radius: 5%;
+    background-color: rgba(100, 100, 100, 0.2);
+}
+
+.itemInfo li{
+    margin: 10px;
+    font-size: 1.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.buyButton {
+    border-radius: 5%;
+    cursor: pointer;
+    padding: 1.2rem;
+    margin-top: 10%;
+    background-color: rgb(76, 76, 243);
+    border: none;
+    width: 50%;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.buyButton:hover {
+    background-color: rgb(124, 124, 224);
+}
+
+.nav-menu {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    position: fixed;
+    top : 0;
+    right : -100%;
+    transition: 850ms;
+    z-index: 1000;
+}
+
+@media screen and (min-width:700px) {
+    .nav-menu {
+        width: 45%;
+    }
+}
+
+.nav-menu.active  {
+    right: 0;
+    transition: 350ms;
+}
+
+.nav-menu-items {
+    width: 100%;
+}
+
+.navbar-toggle {
+    background-color: black;
+    width: 100%;
+    padding: 2%;
+    top: 0;
+    left: 0;
+}
+
+span {
+    margin-left: 16px;
+}
+
+.gameBox {
+    margin-top: 5%;
+    height: 40%;
+    border: 2px solid grey;
+    border-radius: 10%;
+}
+
+.closeButton {
+    align-self: flex-start;
+    width: 100%;
+    padding: 2%;
+    cursor: pointer;
+}
