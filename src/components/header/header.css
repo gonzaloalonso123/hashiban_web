@@ -32,7 +32,7 @@ header {
 
 header .logo {
 	display: block;
-	font-size: clamp(4rem, 2.5vw, 6rem); 
+	font-size: clamp(3rem, 2.5vw, 6rem); 
 	text-shadow: 1px 1px black;
 }
 
@@ -42,12 +42,12 @@ header nav {
 }
 
 header nav a {
-	margin: 5px 2vw;
+	margin: 5px 1.5vw;
 	list-style: none;
-	padding: 0.2vh 10px;
+	padding: 0.2vh 1vw;
 	text-decoration: none;
 	border-radius: 15px;
-	font-size: clamp(2rem, 2.5vw, 3rem);
+	font-size: clamp(1.7rem, 2.5vw, 3rem);
 }
 
 header nav a:hover,

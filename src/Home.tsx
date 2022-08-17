@@ -1,4 +1,3 @@
-import DescriptionBox from './components/hashiban_lore/DescriptionBox';
 import './styles/App.css';
 import Header from './components/header/Header';
 import Image from './components/image_top/Image';
@@ -15,7 +14,7 @@ function Home() {
 	return (
 		<div className='main'>
 			<NavBar setBuyTab = {setBuyTab} buyTab = {buyTab}/>
-			<Header  setBuyTab = {setBuyTab} buyTab = {buyTab}/>
+			<Header setBuyTab = {setBuyTab} buyTab = {buyTab}/>
 			<Image/>
 			<Introduction />
 			<DescriptionCarousel />

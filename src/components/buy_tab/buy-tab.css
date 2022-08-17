@@ -10,7 +10,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-top: 10%;
     margin-bottom: 5%;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .itemInfo {
@@ -23,9 +23,8 @@
     flex-direction: column;
     align-items:center;
     margin: auto auto;
-    /* border: 2px solid white; */
     border-radius: 5%;
-    background-color: rgba(100, 100, 100, 0.2);
+    /* background-color: rgba(100, 100, 100, 0.2); */
 }
 
 .itemInfo li{
@@ -38,7 +37,7 @@
     border-radius: 5%;
     cursor: pointer;
     padding: 1.2rem;
-    margin-top: 10%;
+    margin-top: 3%;
     background-color: rgb(76, 76, 243);
     border: none;
     width: 50%;
