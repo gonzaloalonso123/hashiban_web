@@ -1,11 +1,12 @@
 import './styles/App.css';
 import Header from './components/header/Header';
-import Image from './components/image_top/Image';
+import ImageTop from './components/image_top/Image';
 import Introduction from './components/introductory_text/Introduction';
 import Video from './components/video/Video';
 import DescriptionCarousel from './components/card_display/Description-carousel';
 import { useState } from 'react';
 import NavBar from './components/buy_tab/buy-tab';
+import ImageBottom from './components/image_bot/Image_bottom';
 
 function Home() {
 
@@ -15,10 +16,11 @@ function Home() {
 		<div className='main'>
 			<NavBar setBuyTab = {setBuyTab} buyTab = {buyTab}/>
 			<Header setBuyTab = {setBuyTab} buyTab = {buyTab}/>
-			<Image/>
+			<ImageTop/>
 			<Introduction />
 			<DescriptionCarousel />
-			<Video />
+			{/* <Video /> */}
+			<ImageBottom />
 		</div>
 	);
 }

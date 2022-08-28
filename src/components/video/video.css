@@ -1,6 +1,9 @@
 .video-section {
 	margin-top: 100px;
 	width: 100%;
+	background: linear-gradient(to bottom, transparent, #000000);
+	padding-top: 2%;
+	padding-bottom: 5%;
 }
 
 .video {
@@ -14,7 +17,11 @@
 
 @media screen and (min-width: 1349px){
 	.video-section {
-		width: 55%;
+		width: 100%;
+	}
+
+	.video {
 		margin-left: 30%;
+		width: 55%;
 	}
 }
