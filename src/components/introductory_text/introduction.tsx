@@ -1,14 +1,18 @@
-import './introductory_text.css';
+import "./introductory_text.css";
+import Logo from "../../images/logo.png";
 
-function Introduction() {
+interface props {
+    text: string;
+}
+function Introduction({text} : props) {
   return (
-	<div className='introduction-section'>
-		<div className='introduction'>
-		<p>
-			La subasta de Hashiban es un juego de cartas ambientado en un universo de magia y trasgos para amantes de las subastas, la estrategia, y el manejo de fajos.
-		</p>
-		</div>
-	</div>
+    <div className="introduction-section">
+      <div className="introduction">
+        <p>
+          {text}
+        </p>
+      </div>
+    </div>
   );
 }
 

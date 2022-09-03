@@ -1,0 +1,14 @@
+
+@media screen and (min-width : 0){
+    .basic-info-display_image {
+        width: 100vw;
+        display: block;
+    }
+}
+@media screen and (min-width : 1000px){
+    .basic-info-display_image {
+        width: 33vw;
+        margin-left: 0;
+        display: inline;
+    }    
+}

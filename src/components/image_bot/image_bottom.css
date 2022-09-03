@@ -1,52 +1,52 @@
-#image-bot_section {
-  position: relative;
-  width: 100%;
-  bottom: 0;
-  left: 0;
+.image-bot_section {
+	position: relative;
+	/* height: 100vh; */
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow-x: scroll;
+	white-space: nowrap;
+	scroll-behavior: smooth;
+	animation:opacity-in 0.1s;
   background-color: black;
+	/* overflow: cover; */
 }
 
-#image-bot_section img {
-  position: absolute;
-  transition: 0.2s;
-  min-height: 45vh;
-}
+.image-bot_section::-webkit-scrollbar {
+	display: none;
+  }
 
-#image-bot_section img#background {
-  object-fit: cover;
-  opacity: 0.8;
-  width: 100%;
-  object-position: top right;
-}
+  @media screen and (min-width : 0)  {
+	.image-bot_section img {
+		height: 80vh;
+	}
 
-#image-bot_section img#goblins,
-img#shine {
-  z-index: 6;
-  object-position: top right;
-  width: 80%;
-  right: 0;
-  height: 100%;
-  min-height: 45vh;
-}
-
-@media screen and (width < 800px) {
-  #image-bot_section img#goblins,
-  img#shine {
-    margin-right: 5%;
-    width: 85%;
+  .image-bot_section {
+    height: 80vh;
   }
 }
 
-@media screen and (width < 500px) {
-  #image-bot_section img#goblins,
-  img#shine {
-    object-fit: contain;
-    width: 100vw;
-    margin-right: -5vw;
-  }
+@media screen and (min-width : 1000px)  {
+
+	.image-bot_section {
+		height: 100vh;
+	}
+
+	.image-bot_section img {
+		height: 100vh;
+	}
 }
 
-#image-bot_section::before {
+
+.image-bot_section img {
+	position: absolute;
+	object-position: top left;
+	top: 0;
+	left: 0;
+	min-width: 100vw;
+}
+
+#image-bot_flex::before {
   content: "";
   position: absolute;
   top: 0;
@@ -57,12 +57,12 @@ img#shine {
   z-index: 5;
 }
 
-#image-bot_section img#shine {
-z-index: 7;
-  animation: opacity-in 1s infinite;
+.image-bot_section img#shine {
+  z-index: 7;
+  animation: opacity-in 6s infinite;
 }
 
-#image-bot_section img#background {
+.image-bot_section img#background {
   animation: opacity-breathe 4s infinite;
 }
 
@@ -72,7 +72,7 @@ z-index: 7;
   }
 
   50% {
-    opacity: 0.2;
+    opacity: 0.5;
   }
 
   100% {
@@ -82,14 +82,14 @@ z-index: 7;
 
 @keyframes opacity-breathe {
   0% {
-    opacity: 0.6;
+    opacity: 0.4;
   }
 
   50% {
-    opacity: 0.8;
+    opacity: 0.7;
   }
 
   100% {
-    opacity: 0.6;
+    opacity: 0.4;
   }
 }

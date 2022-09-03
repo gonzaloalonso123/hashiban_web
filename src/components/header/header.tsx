@@ -12,12 +12,6 @@ function Header({ setBuyTab, buyTab }: props) {
 
   const handleScroll = () => {
     if (window.scrollY > document.body.scrollHeight / 5) {
-      console.log(
-        "scrolly: " +
-          window.scrollY +
-          " window.outerHeight:" +
-          document.body.scrollHeight
-      );
       setBlackHeader(true);
     } else {
       setBlackHeader(false);
@@ -43,7 +37,6 @@ function Header({ setBuyTab, buyTab }: props) {
         <a onClick={handleBuyBar}>
           Comprar
         </a>
-        <a href="#">Sobre nosotros</a>
         <a href="#">Instrucciones</a>
       </nav>
     </header>

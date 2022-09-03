@@ -7,6 +7,9 @@ import DescriptionCarousel from './components/card_display/Description-carousel'
 import { useState } from 'react';
 import NavBar from './components/buy_tab/buy-tab';
 import ImageBottom from './components/image_bot/Image_bottom';
+import texts from './content/texts';
+import Basic_info from './components/basic_info_display/Basic_info';
+import Footer from './components/footer/Footer';
 
 function Home() {
 
@@ -17,10 +20,13 @@ function Home() {
 			<NavBar setBuyTab = {setBuyTab} buyTab = {buyTab}/>
 			<Header setBuyTab = {setBuyTab} buyTab = {buyTab}/>
 			<ImageTop/>
-			<Introduction />
+			<Introduction text={texts[0].description}/>
 			<DescriptionCarousel />
 			{/* <Video /> */}
 			<ImageBottom />
+			<Introduction text={texts[1].description}/>
+			<Basic_info />
+			<Footer />
 		</div>
 	);
 }
