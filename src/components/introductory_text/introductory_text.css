@@ -20,26 +20,13 @@
 
 .introduction
  {
-	margin-left: 50px;
+	margin:  auto;
 	font-size: clamp(2rem, 2.5vw, 3.2rem); 
 	line-height: 1.5em;
 	text-shadow: 4px 0px 4px rgb(135, 135, 135);
 	max-width: 75ch;
+	width: 70%;
 	text-align: left;
 }
 
-@media screen and (min-width: 1349px) {
-	.introduction{
-		padding-left: 25%;
-		padding-right: 15%;
-	}
-}
-
-/* For Mobile Portrait View */
-@media screen and (max-width: 1358px){
-	.introduction{
-		margin: auto auto;
-		padding: 8%;
-	}
-}
  

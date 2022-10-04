@@ -1,11 +1,9 @@
 .image-top_section {
 	position: relative;
-	/* height: 100vh; */
 	top: 0;
 	right: 0;
 	width: 100%;
 	overflow-x: scroll;
-	/* overflow-y: hide; */
 	white-space: nowrap;
 	scroll-behavior: smooth;
 	animation:opacity-in 0.1s;
@@ -40,35 +38,19 @@
 	opacity: 0.8;
 }
 
-.image-top_section img#wall {
-	left: -25%;
-}
-
 @media screen and (min-width : 0)  {
     #wall {
        /* opacity: 0; */
 	   position: absolute;
     }
-	.image-top_section img#tabern, img#lights {
-		animation: move-background 3s;
-	}
 	.image-top_section img {
-		height: 90vh;
+		height: 85vh;
 	}
 }
 
-@media screen and (max-width : 600px)  {
-	.top-scroll_shine {
-		content: "";
-		position: absolute;
-		object-position: top right;
-		top: 0;
-		right: 0;
-		width: 2vw;
-		height: 90vh;
-		background: linear-gradient(to left, rgb(225, 193, 133), transparent);
-		z-index: 5;
-		animation: opacity-breathe 2s infinite ;
+@media screen and (max-width : 800px)  {
+	.image-top_section img#tabern, img#lights {
+		animation: move-background 6s;
 	}
 }
 
@@ -83,7 +65,7 @@
 	}
 
 	#wall {
-		/* position: fixed; */
+		position: fixed;
 	}
 }
 

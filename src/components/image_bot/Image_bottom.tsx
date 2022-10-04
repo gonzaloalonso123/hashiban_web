@@ -13,8 +13,6 @@ function ImageBottom() {
     setOffsetY(window.scrollY);
     if (imageRef.current != null) {
       setParentHeight(imageRef.current.height);
-      console.log(imageRef.current.width);
-      console.log("y:", imageRef.current.getClientRects());
     }
   };
 
@@ -48,7 +46,7 @@ function ImageBottom() {
         <img
           src={Shine}
           id="shine"
-          style={{ transform: `translateX(${offsetY * -0.10}px)` }}
+          style={{ transform: `translateX(${offsetY * -0.1}px)` }}
         />
         <img
           src={Background}
@@ -61,7 +59,7 @@ function ImageBottom() {
           src={Goblins}
           alt=""
           id="goblins"
-          style={{ transform: `translateX(${0.05 * -offsetY }px)` }}
+          style={{ transform: `translateX(${0.05 * -offsetY}px)` }}
         />
       </div>
     </div>

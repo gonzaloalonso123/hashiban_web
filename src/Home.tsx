@@ -7,7 +7,7 @@ import DescriptionCarousel from './components/card_display/Description-carousel'
 import { useState } from 'react';
 import NavBar from './components/buy_tab/buy-tab';
 import ImageBottom from './components/image_bot/Image_bottom';
-import texts from './content/texts';
+import texts from './content/Texts';
 import Basic_info from './components/basic_info_display/Basic_info';
 import Footer from './components/footer/Footer';
 

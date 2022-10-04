@@ -48,10 +48,10 @@ function NavBar({ setBuyTab, buyTab }: props) {
           <AiIcons.AiOutlineClose size={20} />
         </a>
         <div className="product">
-          <label className="titleOfProduct">Edición estándar</label>
+          <label className="titleOfProduct">La subasta de Hashiban</label>
           <img src={GameBox} alt="" className="gameBox" />
           <ul className="itemInfo">
-            <li>Juego completo con 140 cartas.</li>
+            <li>Juego completo con 117 cartas.</li>
             <li>Envio gratuito a toda la peninsula.</li>
           </ul>
           <button className="buyButton" onClick={redirectToCheckout}>14,99€</button>

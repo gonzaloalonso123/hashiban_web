@@ -1,6 +1,7 @@
 import "./header.css";
 import Logo from "../../images/logo.png";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 interface props {
   setBuyTab: any;
@@ -11,7 +12,7 @@ function Header({ setBuyTab, buyTab }: props) {
   const [blackHeader, setBlackHeader] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > document.body.scrollHeight / 5) {
+    if (window.scrollY > document.body.scrollHeight / 10) {
       setBlackHeader(true);
     } else {
       setBlackHeader(false);
@@ -37,7 +38,9 @@ function Header({ setBuyTab, buyTab }: props) {
         <a onClick={handleBuyBar}>
           Comprar
         </a>
-        <a href="#">Instrucciones</a>
+        <Link to = '/instrucciones'>
+                Instrucciones
+        </Link>
       </nav>
     </header>
   );

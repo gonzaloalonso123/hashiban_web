@@ -2,7 +2,7 @@ import "./card_display.css";
 import cards from "../../content/IntroductionImages";
 import arrowL from "../../images/izqda.png";
 import arrowR from "../../images/dcha.png";
-import descriptions from "../../content/descriptions";
+import descriptions from "../../content/Descriptions";
 import { useState } from "react";
 
 const DescriptionCarousel = () => {

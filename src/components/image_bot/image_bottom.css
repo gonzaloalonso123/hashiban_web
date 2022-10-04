@@ -18,9 +18,9 @@
 
   @media screen and (min-width : 0)  {
 	.image-bot_section img {
-		height: 80vh;
+    height: 80vh;
 	}
-
+  
   .image-bot_section {
     height: 80vh;
   }

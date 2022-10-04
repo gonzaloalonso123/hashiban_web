@@ -1,0 +1,69 @@
+.instrucciones_container {
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+  background-image: radial-gradient(
+      white,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 40px
+    ),
+    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px),
+    radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 30px
+    );
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+.instrucciones_container img#goBack{
+  padding: 10px;
+  width: 20px;
+  height: 15px;
+  align-self: start;
+  top: 0;
+  left: 0;
+}
+
+.goBack:hover {
+  transform: scale(1.2);
+}
+
+.instrucciones_container h1 {
+  font-size: clamp(2rem, 2.5vw, 3.2rem);
+}
+
+.instrucciones_container p {
+  font-size: clamp(2rem, 2.5vw, 3.2rem);
+  padding: 5%;
+  line-height: 30px;
+}
+
+.instrucciones_container img{
+    width: 100vw;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.instrucciones_container img#tablero{
+    width: 50vw;
+}
+
+.instrucciones_container img#mano{
+    width: 95vw;
+}
+
+.instrucciones_container img#armas{
+    width: 65vw;
+}
+
+.instrucciones_container img#interseccion{
+    width: 95vw;
+}

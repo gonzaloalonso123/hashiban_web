@@ -1,5 +1,4 @@
 .buyArea {
-    margin-top: 10%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -8,9 +7,10 @@
 
 .titleOfProduct{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-top: 10%;
     margin-bottom: 5%;
     font-size: 3rem;
+    text-align: center;
+    justify-content: center;
 }
 
 .itemInfo {
@@ -56,6 +56,7 @@
     display: flex;
     flex-direction: column;
     align-items:center;
+    justify-content: center;
     position: fixed;
     top : 0;
     right : -100%;
@@ -78,28 +79,20 @@
     width: 100%;
 }
 
-.navbar-toggle {
-    background-color: black;
-    width: 100%;
-    padding: 2%;
-    top: 0;
-    left: 0;
-}
-
 span {
     margin-left: 16px;
 }
 
 .gameBox {
     margin-top: 5%;
-    height: 40%;
-    border: 2px solid grey;
+    width: 50%;
     border-radius: 10%;
 }
 
 .closeButton {
-    align-self: flex-start;
-    width: 100%;
+    right: 0;
+    width: 5%;
     padding: 2%;
     cursor: pointer;
+    align-self: flex-end;
 }
