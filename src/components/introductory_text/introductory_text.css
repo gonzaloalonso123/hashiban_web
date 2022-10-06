@@ -25,8 +25,15 @@
 	line-height: 1.5em;
 	text-shadow: 4px 0px 4px rgb(135, 135, 135);
 	max-width: 75ch;
-	width: 70%;
+	width: 90%;
 	text-align: left;
+}
+
+@media screen and (min-width : 1000px){
+	.introduction {
+		width: 70%;
+		margin-left: 25%;
+	}
 }
 
  

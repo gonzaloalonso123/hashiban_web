@@ -1,6 +1,6 @@
 import React from "react";
 import "./guide.css";
-import FlechaImg from "../../images/left-arrow.png";
+import FlechaImg from "../../images/izqda.png";
 import { Link } from "react-router-dom";
 import ManoImg from '../../images/Mano.png';
 import TableroImg from '../../images/Tablero.png';

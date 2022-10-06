@@ -17,7 +17,8 @@
 	background: url('../../images/Empty.png');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	width: 100%;
+	width: 90%;
+	margin: auto;
 	/* background: linear-gradient(to bottom, transparent, #000000); */
 }
 
@@ -48,12 +49,18 @@
 	}
 }
 
-@media screen and (min-width  : 1040px){
+@media screen and (min-width  : 1000px){
 	.container{
 		width: 650px;
 		margin: auto;
 	}
 }
+/* 
+@media screen and (max-width  : 1040px){
+	.container{
+	}
+} */
+
 @media screen and (min-width  : 801px){
 	.container{
 		padding-bottom: 20%;
