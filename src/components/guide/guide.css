@@ -21,6 +21,7 @@
     );
   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  font-family: cabin;
 }
 
 .instrucciones_container img#goBack{
@@ -32,24 +33,30 @@
   left: 0;
 }
 
-.goBack:hover {
-  transform: scale(1.2);
-}
-
 .instrucciones_container h1 {
-  font-size: clamp(2rem, 2.5vw, 3.2rem);
+  font-size: clamp(2rem, 2.5vw, 2.5rem);
 }
 
 .instrucciones_container p {
-  font-size: clamp(2rem, 2.5vw, 3.2rem);
+  font-size: clamp(2rem, 2.5vw, 2.5rem);
   padding: 5%;
   line-height: 30px;
 }
 
 .instrucciones_container img{
-    width: 100vw;
     padding-top: 5%;
     padding-bottom: 5%;
+}
+
+.instrucciones_container img.goBack{
+  width: 100px;
+  margin: 20px;
+  border-radius: 15px;
+  height: auto;
+}
+
+.instrucciones_container img.goBack:hover {
+  transform: scale(1.02);
 }
 
 .instrucciones_container img#tablero{

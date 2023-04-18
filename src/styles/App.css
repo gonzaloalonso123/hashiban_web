@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: font;
+  /* font-family: font; */
   scroll-behavior: smooth;
   color: #fff;
 }
@@ -16,23 +16,18 @@
 }
 
 @font-face {
-  font-family: dunkin;
-  src: url(../fonts/Dunkin\ Sans.otf);
+  font-family: sourceserif;
+  src: url(../fonts/SourceSerifPro-Regular.ttf);
 }
 
 @font-face {
-  font-family: kanit;
-  src: url(../fonts/Kanit-Light.ttf);
+  font-family: alkalami;
+  src: url(../fonts/Alkalami-Regular.ttf);
 }
 
 @font-face {
-  font-family: josefin;
-  src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
-}
-
-@font-face {
-  font-family: asap;
-  src: url(../fonts/Asap-SemiBold.ttf);
+  font-family: cabin;
+  src: url(../fonts/Cabin-VariableFont_wdth\,wght.ttf);
 }
 
 .main {
@@ -60,6 +55,7 @@ background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
 
 .main {
   background-color: black;
+  min-height: 100vh;
   background-image: radial-gradient(
       white,
       rgba(255, 255, 255, 0.2) 2px,
@@ -74,4 +70,27 @@ background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
     );
   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+.std-button {
+	margin: 5px 1.5vw;
+  border: none;
+	list-style: none;
+	padding: 0.2vh 1vw;
+	text-decoration: none;
+	border-radius: 15px;
+	background-color: rgba(222,222,222,0.1);
+	font-size: clamp(1.7rem, 2.5vw, 2.6rem);
+}
+
+.std-button:hover,
+.std-button.active {
+	text-decoration: none;
+	background: #fff;
+	color: #7c4b07;
+	cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
 }

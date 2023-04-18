@@ -29,7 +29,7 @@ const DescriptionCarousel = () => {
   return (
     <div className="container">
       <div className="scroll">
-        <h1 className="title">Cartas de Hashiban</h1>
+        <h1 className="title">Tipos de carta</h1>
         <div className="description-carousel">
           <img
             src={arrowL}

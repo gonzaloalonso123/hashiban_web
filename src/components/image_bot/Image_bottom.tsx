@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./image_bottom.css";
-import Goblins from "../../images/image_bot_goblins.png";
 import Background from "../../images/image_bot_fondo.png";
 import Shine from "../../images/image_bot_shine.png";
+import Goblins from "../../images/image_bot_goblins.png";
 
 function ImageBottom() {
   const [offsetY, setOffsetY] = useState(0);
   const [parentHeight, setParentHeight] = useState(0);
   const imageRef = useRef<HTMLImageElement>(null);
+  const imageRefContainer = useRef<HTMLImageElement>(null);
 
   const handleScroll = () => {
     setOffsetY(window.scrollY);
@@ -26,8 +27,9 @@ function ImageBottom() {
   }, []);
 
   const handleImageLoad = () => {
-    if (imageRef.current != null) {
+    if (imageRef.current != null && imageRefContainer.current != null) {
       setParentHeight(imageRef.current.height);
+      imageRefContainer.current.scrollTo(300, 0);
     }
   };
 
@@ -42,6 +44,7 @@ function ImageBottom() {
         style={{
           height: parentHeight,
         }}
+        ref =  {imageRefContainer}
       >
         <img
           src={Shine}

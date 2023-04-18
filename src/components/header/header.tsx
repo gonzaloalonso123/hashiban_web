@@ -35,10 +35,10 @@ function Header({ setBuyTab, buyTab }: props) {
         <a className="logo">La subasta de Hashiban</a>
       </div>
       <nav>
-        <a onClick={handleBuyBar}>
+        <a onClick={handleBuyBar} className='std-button'>
           Comprar
         </a>
-        <Link to = '/instrucciones'>
+        <Link to = '/instrucciones' className='std-button'>
                 Instrucciones
         </Link>
       </nav>

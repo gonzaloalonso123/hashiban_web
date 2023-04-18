@@ -1,24 +1,40 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./image_top.css";
-import HorizontalScroll from "react-scroll-horizontal";
 import BatImg from "../../images/bat.png";
 import DemonImg from "../../images/demon.png";
 import WallImg from "../../images/wall.png";
+// import TabernImg from "../../images/tabern.png";
 import TabernImg from "../../images/tabern.png";
 import Lights from "../../images/lights4.png";
-import ScrollArrows from "../../images/scroll-arrows.png";
+import Abajo from "../../images/abajo.png";
 
-function ImageTop() {
+interface imageTopProps {
+  setLoaded: React.Dispatch<React.SetStateAction<any>>;
+}
+function ImageTop({ setLoaded }: imageTopProps) {
   const [offsetY, setOffsetY] = useState(0);
   const [parentHeight, setParentHeight] = useState(0);
-  const [scrollLightInvisible, setScrollLightInvisible] = useState(true);
+  const [scrollVisible, setScrollVisible] = useState(true);
   const imageRef = useRef<HTMLImageElement>(null);
 
   const handleScroll = () => {
     setOffsetY(window.scrollY);
     if (imageRef.current != null) {
       setParentHeight(imageRef.current.height);
+      if (imageRef.current?.scrollLeft > 0) {
+        setScrollVisible(false);
+      } else {
+        setScrollVisible(true);
+      }
     }
+  };
+
+  const handleBottomArrowClick = () => {
+    window.scrollTo(0, window.innerHeight * 0.8);
+  };
+
+  const handleRightArrowClick = () => {
+    window.scrollTo(window.innerWidth, 0);
   };
 
   useEffect(() => {
@@ -31,6 +47,7 @@ function ImageTop() {
   const handleImageLoad = () => {
     if (imageRef.current != null) {
       setParentHeight(imageRef.current.height);
+      setLoaded(true);
     }
   };
 
@@ -76,6 +93,10 @@ function ImageTop() {
             }px)`,
           }}
         />
+        <img id="abajo" src={Abajo} onClick={handleBottomArrowClick} />
+        {scrollVisible && (
+          <img id="derecha" src={Abajo} onClick={handleRightArrowClick} />
+        )}
       </div>
     </div>
   );

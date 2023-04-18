@@ -7,18 +7,25 @@
 }
 
 .arrow{
-	opacity: 0.7;
-	width: 25%;
+	width: 20%;
+	cursor: pointer;
+	margin: 20px;
+	z-index: 1;
+	transition: 0.2s all;
 }
 
 .container {
 	border-radius: 2em;
 	background-color: rgba(0, 0, 0, 0.4);
-	background: url('../../images/Empty.png');
+	background: url('../../images/Empty.webp');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	width: 90%;
+	max-width: 550px;
 	margin: auto;
+	border: 1px solid transparent;
+	font-family: cabin;
+
 	/* background: linear-gradient(to bottom, transparent, #000000); */
 }
 
@@ -26,6 +33,12 @@
 	opacity: 1;
 	transform: scale(1.05);
 } 
+
+@media screen and (min-width : 1000px){
+	.container {
+		margin-left: 35%;
+	}
+}
 
 .arrow.left{
 	 margin: auto ;
@@ -37,75 +50,46 @@
 }
 
 .card {
-	width:40%;
-	border-radius: 1.7em;
+	width:35%;
+	border-radius: 1.5em;
 	box-shadow: 8px 8px 12px black;
-}
-
-@media screen and (max-width: 800px)
-{
-	.container {
-		padding-bottom: 40%
-	}
-}
-
-@media screen and (min-width  : 1000px){
-	.container{
-		width: 650px;
-		margin: auto;
-	}
-}
-/* 
-@media screen and (max-width  : 1040px){
-	.container{
-	}
-} */
-
-@media screen and (min-width  : 801px){
-	.container{
-		padding-bottom: 20%;
-	}
-}
-
-/* .description {
-	padding-top: 5%;
-	text-shadow: 2px 5px #000000;
-	text-align: justify;
-	font-size: 1.2em;
-	width: 70%;
+	transition: 0.5s all;
+	margin: 5px;
 	z-index: 100;
-	padding-bottom: 5%;
-	border: 2px solid rgba(180, 140, 30, 0.7);
-	box-shadow: 2px 2px rgba();
-	border-radius: 2em;
-	background-image: repeating-linear-gradient(36deg, rgba(122, 69, 24, 0.55), rgba(112, 63, 16, 0.85) 1px, transparent 0px, transparent 2px);
-	background-size: 12px;
-} */
+}
+.card:hover{
+	transform: scale(1.5);
+	margin-bottom: 70px;
+	margin-top: 70px;
+}
 
 .description {
-	line-height: 1.4em;
-	font-size: clamp(2rem, 5vw, 2.8rem); 
+	line-height: 1.2em;
+	font-size: clamp(2.2rem, 2vw, 2.8rem); 
+	font-size: clamp(2rem, 2vw, 2.6rem); 
+	font-size: clamp(1.8rem, 2.5vw, 2.5rem); 
 	color: black;
-	width: 60%;
-	margin-left: 20%;
-	height: 30vh;
+	width: 78%;
+	margin: auto;
+	height: 8em;
 	text-align:center;
-	text-shadow: 4px 4px 4px #e9d5a7;
 	padding-bottom: 20px;
+	margin-bottom: 100px;
 }
 
 .title {
 	color: black;	
-	text-shadow: 4px 4px 4px #e9d5a7;
 	margin-bottom: 2%;
+	font-weight: normal;
 	padding-top: 5%;
 	text-align: center;
+	font-family: font;
 }
 
 h1.title {
-	font-size: 5em;
-	text-shadow: 4px 4px 4px #e9d5a7;
-	padding-top: 15%;
+	font-size: 4.5em;
+	padding-top: 12%;
 	color: black;
-	/* color: fff; */
+	text-decoration: none;
+	font-family: font;
 }

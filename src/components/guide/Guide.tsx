@@ -1,8 +1,8 @@
 import React from "react";
 import "./guide.css";
-import FlechaImg from "../../images/izqda.png";
+import GoblinImg from "../../images/goblinImage.png";
 import { Link } from "react-router-dom";
-import ManoImg from '../../images/Mano.png';
+import ManoImg from '../../images/Mano.webp';
 import TableroImg from '../../images/Tablero.png';
 import InterseccionImg from '../../images/Interseccion.png';
 import ArmasImg from '../../images/Armas.png';
@@ -11,7 +11,7 @@ function Guide() {
   return (
     <div className="instrucciones_container">
       <Link to="/">
-        <img src={FlechaImg} id="goBack" />
+        <img src={GoblinImg} className = "goBack"/>
       </Link>
       <h1><u>Preparando la partida</u></h1>
       <p>

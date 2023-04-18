@@ -1,14 +1,20 @@
-
-@media screen and (min-width : 0){
-    .basic-info-display_image {
-        width: 90%;
-        display: block;
-        margin: auto;
-    }
+.basic-info-display_image {
+  width: 90%;
+  max-width: 550px;
+  margin: auto;
+  margin-top: 10px;
+  display: block;
+  transition : 0.5s;
+  z-index: 100;
 }
-@media screen and (min-width : 1000px){
-    .basic-info-display_image {
-        width: 650px;
-        margin: auto;
-    }    
+.basic-info-display_image:hover {
+  /* transition: 0.5s; */
+  transform: rotate(1deg) scale(1.1);
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1000px) {
+  .basic-info-display_image {
+    margin-left: 35%;
+  }
 }
