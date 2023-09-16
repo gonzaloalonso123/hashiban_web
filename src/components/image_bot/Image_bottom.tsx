@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./image_bottom.css";
-import Background from "../../images/image_bot_fondo.png";
-import Shine from "../../images/image_bot_shine.png";
-import Goblins from "../../images/image_bot_goblins.png";
+import Background from "../../images/image_bot_fondo.webp";
+import Shine from "../../images/image_bot_shine.webp";
+import Goblins from "../../images/image_bot_goblins.webp";
 
 function ImageBottom() {
   const [offsetY, setOffsetY] = useState(0);
@@ -44,7 +44,7 @@ function ImageBottom() {
         style={{
           height: parentHeight,
         }}
-        ref =  {imageRefContainer}
+        ref={imageRefContainer}
       >
         <img
           src={Shine}

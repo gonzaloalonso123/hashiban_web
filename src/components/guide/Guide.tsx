@@ -1,6 +1,6 @@
 import React from "react";
 import "./guide.css";
-import GoblinImg from "../../images/goblinImage.png";
+import Left from "../../images/izqda.png";
 import { Link } from "react-router-dom";
 import ManoImg from '../../images/Mano.webp';
 import TableroImg from '../../images/Tablero.png';
@@ -11,7 +11,7 @@ function Guide() {
   return (
     <div className="instrucciones_container">
       <Link to="/">
-        <img src={GoblinImg} className = "goBack"/>
+        <img src={Left} className = "goBack"/>
       </Link>
       <h1><u>Preparando la partida</u></h1>
       <p>

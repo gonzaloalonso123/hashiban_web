@@ -2,8 +2,9 @@ import "./card_display.css";
 import cards from "../../content/IntroductionImages";
 import arrowL from "../../images/izqda.png";
 import arrowR from "../../images/dcha.png";
-import descriptions from "../../content/Descriptions";
+import descriptions from "../../content/descriptions";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const DescriptionCarousel = () => {
   const [currentCard, setCurrentCard] = useState(0);
@@ -27,7 +28,13 @@ const DescriptionCarousel = () => {
   };
 
   return (
-    <div className="container">
+    <motion.div
+      className="container"
+      initial={{ opacity: 0, scale: 0.5 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.3 }}
+      viewport={{ once: true }}
+    >
       <div className="scroll">
         <h1 className="title">Tipos de carta</h1>
         <div className="description-carousel">
@@ -50,7 +57,7 @@ const DescriptionCarousel = () => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

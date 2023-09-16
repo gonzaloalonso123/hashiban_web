@@ -1,0 +1,207 @@
+.auction-container {
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  background-image: radial-gradient(
+      white,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 40px
+    ),
+    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px),
+    radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 30px
+    );
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  font-family: cabin;
+  overflow-y: scroll;
+}
+
+.auction-title {
+  font-size: 3em;
+}
+
+.auction-image {
+  width: 90%;
+  max-width: 200px;
+  margin: auto;
+  margin-top: 10px;
+  display: block;
+  transition: 0.5s;
+  z-index: 100;
+  padding: 4em 0;
+  filter: drop-shadow(0 0 1rem rgba(255, 130, 0, 1));
+}
+
+.auction-form-field {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: left;
+}
+
+.auction-form-field h3 {
+  margin: 0;
+  width: 30%;
+  margin-right: 1em;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.auction-form-field input {
+  border-radius: 0.5em;
+  border: 1px solid black;
+  padding: 0.5em;
+  color: black;
+  width: 70%;
+}
+
+.auction-box-container {
+  display: flex;
+  margin: 2em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  /* From https://css.glass */
+  background: rgba(255, 244, 211, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.2px);
+  -webkit-backdrop-filter: blur(4.2px);
+  padding: 1em 1em 0 1em;
+}
+
+.auction-makebid-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(121, 77, 9);
+  background: linear-gradient(
+    90deg,
+    rgba(121, 77, 9, 1) 35%,
+    rgba(255, 130, 0, 1) 100%
+  );
+  padding: 1em;
+  gap: 0.5em;
+}
+
+.auction-button {
+  background-color: black;
+  margin-top: 1em;
+}
+
+.auction-history-container {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+}
+
+.auction-history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+  font-size: 2em;
+  gap: 2em;
+  border-bottom: 1px solid black;
+}
+
+.accept-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: 90%;
+  justify-content: left;
+  margin: 0 auto;
+}
+
+.accept-container > input {
+  width: 13px;
+  height: 13px;
+}
+
+.show-history-arrow-container {
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.show-history-arrow-container:hover {
+  background-color: gray;
+}
+
+.down-arrow {
+  width: 1.5em;
+  transition: 0.2s;
+}
+
+.down-arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.current-bid-container {
+  padding: 0.5em 3em;
+  border-radius: 5px;
+  background-color: rgb(76, 76, 243);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.1em;
+}
+
+.current-bid-container > h1 {
+  font-size: 3em;
+  color: white;
+  line-height: 0.8em;
+}
+
+.current-bid-container > label {
+  font-size: 1em;
+  line-height: 1em;
+}
+
+.user-name-container {
+  padding-right: 1em;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-name-container > img {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (width < 1000px) {
+  .auction-header {
+    position: relative;
+  }
+}
+
+.counter {
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.countdown-container {
+  padding: 3em;
+}

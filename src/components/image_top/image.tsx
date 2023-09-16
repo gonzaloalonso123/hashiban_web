@@ -2,11 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import "./image_top.css";
 import BatImg from "../../images/bat.png";
 import DemonImg from "../../images/demon.png";
-import WallImg from "../../images/wall.png";
+import WallImg from "../../images/wall.webp";
 // import TabernImg from "../../images/tabern.png";
-import TabernImg from "../../images/tabern.png";
+import TabernImg from "../../images/tabern.webp";
 import Lights from "../../images/lights4.png";
-import Abajo from "../../images/abajo.png";
 
 interface imageTopProps {
   setLoaded: React.Dispatch<React.SetStateAction<any>>;
@@ -93,10 +92,6 @@ function ImageTop({ setLoaded }: imageTopProps) {
             }px)`,
           }}
         />
-        <img id="abajo" src={Abajo} onClick={handleBottomArrowClick} />
-        {scrollVisible && (
-          <img id="derecha" src={Abajo} onClick={handleRightArrowClick} />
-        )}
       </div>
     </div>
   );

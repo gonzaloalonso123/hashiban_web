@@ -1,12 +1,12 @@
 import "./styles/App.css";
-import Header from "./components/header/Header";
-import ImageTop from "./components/image_top/Image";
+import Header from "./components/header/header";
+import ImageTop from "./components/image_top/image";
 import Text from "./components/introductory_text/Text";
-import DescriptionCarousel from "./components/card_display/Description-carousel";
+import DescriptionCarousel from "./components/card_display/description-carousel";
 import { useState } from "react";
 import NavBar from "./components/buy_tab/buy-tab";
 import ImageBottom from "./components/image_bot/Image_bottom";
-import texts from "./content/Texts";
+import texts from "./content/texts";
 import Basic_info from "./components/basic_info_display/Basic_info";
 import Footer from "./components/footer/Footer";
 import Spinner from "./components/spinner/Spinner";
@@ -30,8 +30,6 @@ function Home() {
       {loaded && (
         <>
           <Text text={texts[0].description} />
-          <DescriptionCarousel />
-          {/* <Video /> */}
           <ImageBottom />
           <Text text={texts[1].description} />
           <Basic_info />

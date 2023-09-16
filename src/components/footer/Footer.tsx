@@ -14,7 +14,7 @@ function Footer({setContactEnabled} : IFooterProps) {
       <nav>
         <a href="#" className='std-button'>Sobre nosotros</a>
         <button className = 'std-button' onClick={() => setContactEnabled(true)}>Contacto</button>
-        <a href ='https://www.instagram.com/subasta_de_hashiban/' className='std-button ig-icon'><IoLogoInstagram/></a>
+        <a href ='https://www.instagram.com/hashiban_es/' className='std-button ig-icon'><IoLogoInstagram/></a>
       </nav>
     </div>
   )

@@ -2,6 +2,7 @@ import "./header.css";
 import Logo from "../../images/logo.png";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import One from "../../images/uno.png";
 
 interface props {
   setBuyTab: any;
@@ -27,19 +28,20 @@ function Header({ setBuyTab, buyTab }: props) {
   }, []);
 
   return (
-    <header
-      id="header"
-      style={{ backgroundColor: blackHeader ? "#111111" : "" }}
-    >
+    <header style={{ backgroundColor: blackHeader ? "#111111" : "" }}>
       <div>
         <a className="logo">La subasta de Hashiban</a>
       </div>
       <nav>
-        <a onClick={handleBuyBar} className='std-button'>
+        <a onClick={handleBuyBar} className="std-button">
           Comprar
         </a>
-        <Link to = '/instrucciones' className='std-button'>
-                Instrucciones
+        <Link to="/instrucciones" className="std-button">
+          Instrucciones
+        </Link>
+        <Link to="/subasta" className="std-button">
+          Subastas
+          <img src={One} className="std-button-notification" />
         </Link>
       </nav>
     </header>

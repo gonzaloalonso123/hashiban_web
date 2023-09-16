@@ -1,7 +1,8 @@
 import React from "react";
 import * as AiIcons from "react-icons/ai";
 import "./buy-tab.css";
-import GameBox from "../../images/producto1.png";
+import GameBox from "../../images/producto2.png";
+import Scroll from '../../images/Empty.webp';
 import {
   Stripe,
   loadStripe,
@@ -50,6 +51,7 @@ function NavBar({ setBuyTab, buyTab }: props) {
           <AiIcons.AiOutlineClose size={20} />
         </a>
         <div className="product">
+          <img src={Scroll} className="buyscroll"/>
           <label className="titleOfProduct">La subasta de Hashiban</label>
           <img src={GameBox} alt="" className="gameBox" />
           <ul className="itemInfo">

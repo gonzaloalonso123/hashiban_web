@@ -1,10 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  /* font-family: font; */
   scroll-behavior: smooth;
   color: #fff;
+  font-family: "Chivo", sans-serif;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@100;200;300;400;500;600;700&display=swap");
 
 :root {
   font-size: 10px;
@@ -25,10 +27,7 @@
   src: url(../fonts/Alkalami-Regular.ttf);
 }
 
-@font-face {
-  font-family: cabin;
-  src: url(../fonts/Cabin-VariableFont_wdth\,wght.ttf);
-}
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap");
 
 .main {
   /* background:
@@ -73,24 +72,58 @@ background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
 }
 
 .std-button {
-	margin: 5px 1.5vw;
+  margin: 5px 1.5vw;
   border: none;
-	list-style: none;
-	padding: 0.2vh 1vw;
-	text-decoration: none;
-	border-radius: 15px;
-	background-color: rgba(222,222,222,0.1);
-	font-size: clamp(1.7rem, 2.5vw, 2.6rem);
+  list-style: none;
+  padding: 0.2vh 1vw;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: rgba(222, 222, 222, 0.1);
+  font-size: clamp(1.7rem, 2.5vw, 2.6rem);
 }
 
 .std-button:hover,
 .std-button.active {
-	text-decoration: none;
-	background: #fff;
-	color: #7c4b07;
-	cursor: pointer;
+  text-decoration: none;
+  background: #fff;
+  color: #7c4b07;
+  cursor: pointer;
+}
+
+.std-button.wide {
+  width: 100%;
+}
+
+.std-button.square {
+  border-radius: 0%;
+}
+
+.std-button.dark {
+  background-color: black;
+}
+
+.std-button.disabled {
+  background-color: rgba(222, 222, 222, 0.1);
+  color: rgba(222, 222, 222, 0.5);
+  cursor: not-allowed;
+}
+
+.std-button-notification {
+  height: 16px;
+  width: 16px;
+  margin-left: 0.4em;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+@keyframes lighthue {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }

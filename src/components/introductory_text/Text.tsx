@@ -1,5 +1,4 @@
 import "./Text.css";
-import Logo from "../../images/logo.png";
 
 interface props {
     text: string;
