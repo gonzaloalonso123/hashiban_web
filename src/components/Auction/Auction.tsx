@@ -11,9 +11,9 @@ import Countdown, { zeroPad } from "react-countdown";
 import { useNavigate } from "react-router-dom";
 
 export const Auction = () => {
-  const [currentBid, setCurrentBid] = useState(0);
-  const [maxBid, setMaxBid] = useState(0);
-  const [history, setHistory] = useState<{ bid: number; name: string }[]>([]);
+  const [currentBid, setCurrentBid] = useState("");
+  const [maxBid, setMaxBid] = useState("");
+  const [history, setHistory] = useState<{ bid: string; name: string }[]>([]);
   const [error, setError] = useState("");
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [acceptedNotification, setAcceptedNotification] = useState(false);
@@ -44,7 +44,8 @@ export const Auction = () => {
 
   const submit = async () => {
     const auctionRef = doc(db, "pujas", "demonedition");
-    if (currentBid > maxBid) {
+
+    if (parseInt(currentBid) > parseInt(maxBid)) {
       await setDoc(auctionRef, {
         bids: [
           ...history,
@@ -63,14 +64,14 @@ export const Auction = () => {
         },
         ...history,
       ]);
-      setMaxBid(currentBid > maxBid ? currentBid : maxBid);
+      setMaxBid(currentBid);
     } else {
       setError("La puja debe ser mayor que la actual");
       setTimeout(() => {
         setError("");
       }, 2000);
     }
-    setCurrentBid(0);
+    setCurrentBid("0");
   };
 
   return (
@@ -196,17 +197,21 @@ export const Auction = () => {
           </div>
           {showHistory && (
             <div className={`auction-history-container`}>
-              {history.map((item, i) => {
-                return (
-                  <>
-                    <div className="auction-history-item" key={i}>
-                      <h3>{item.name}</h3>
-                      <h3>{item.bid}€</h3>
-                    </div>
-                    <hr />
-                  </>
-                );
-              })}
+              {history
+                .sort((a, b) => {
+                  return parseInt(b.bid) - parseInt(a.bid);
+                })
+                .map((item, i) => {
+                  return (
+                    <>
+                      <div className="auction-history-item" key={i}>
+                        <h3>{item.name}</h3>
+                        <h3>{item.bid}€</h3>
+                      </div>
+                      <hr />
+                    </>
+                  );
+                })}
             </div>
           )}
         </div>
