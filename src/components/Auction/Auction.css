@@ -166,6 +166,28 @@
   gap: 0.1em;
 }
 
+.bid-button {
+  margin-top: 2em;
+  padding: 0.5em 3em;
+  border-radius: 5px;
+  background-color: rgb(76, 76, 243);
+  gap: 0.1em;
+  cursor: pointer;
+}
+
+.bid-button.disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.bid-button:hover {
+  background-color: rgb(76, 76, 243, 0.8);
+}
+
+.bid-button.disabled:hover {
+  background-color: gray;
+}
+
 .current-bid-container > h1 {
   font-size: 3em;
   color: white;
@@ -200,8 +222,20 @@
 .counter {
   font-size: 2em;
   font-weight: bolder;
+  color: red;
 }
 
 .countdown-container {
   padding: 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-container h1 {
+  font-weight: bolder;
+  font-size: 1.5em;
 }

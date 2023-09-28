@@ -103,6 +103,7 @@ export const Auction = () => {
         <div className="current-bid-container">
           <label className="auction-subtitle">Puja actual : </label>
           <h1>{maxBid}€</h1>
+          <label className="auction-subtitle">{history[0].name}</label>
         </div>
         <div className="countdown-container">
           <Countdown
@@ -156,9 +157,7 @@ export const Auction = () => {
               </label>
             </div>
             <button
-              className={`std-button auction-button ${
-                acceptedTerms ? "" : "disabled"
-              }`}
+              className={`bid-button ${acceptedTerms ? "" : "disabled"}`}
               disabled={!acceptedTerms}
               onClick={submit}
             >
