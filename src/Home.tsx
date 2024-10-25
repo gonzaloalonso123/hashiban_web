@@ -3,7 +3,7 @@ import Header from "./components/Header/header";
 import ImageTop from "./components/ImageTop/ImageTop";
 import { TextWitMerchant } from "./components/IntroductoryText/Text";
 import { useState } from "react";
-import NavBar from "./components/BuyTab/buy-tab";
+import NavBar from "./components/BuyTab/BuyTab";
 import BasicInfo from "./components/BasicInfoDisplay/BasicInfo";
 import Footer from "./components/Footer/Footer";
 import Spinner from "./components/Spinner/Spinner";

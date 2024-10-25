@@ -82,7 +82,7 @@ const Video = () => {
           className="text-4xl xl:text-[110px] blink text-yellow-200 pointer-events-auto cursor-pointer"
           onClick={() => setClicked(true)}
         >
-          <img src={play} alt="play" className="w-24 xl:w-32"/>
+          <img src={play} alt="play" className="w-20 xl:w-32"/>
         </span>
       ) : (
         <motion.div

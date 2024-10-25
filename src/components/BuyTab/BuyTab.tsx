@@ -1,8 +1,6 @@
-import React from "react";
 import * as AiIcons from "react-icons/ai";
-import "./buy-tab.css";
+import "./BuyTab.css";
 import GameBox from "../../images/producto2.png";
-import Scroll from "../../images/Empty.webp";
 import {
   Stripe,
   loadStripe,

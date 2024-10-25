@@ -19,7 +19,7 @@ export const Music = () => {
 				<h1 className="text-4xl font-hashiban text-white">♪ {t("music_title")}</h1>
 				<p className="text-xl py-10">{t("music_subtitle")}</p>
 				<div className="flex flex-col md:flex-row items-center gap-4 w-full">
-					<img src={MusicImage} alt="Music" className="rounded-md w-full max-w-[300px]" />
+					<img src={MusicImage} alt="Music" className="rounded-md w-full max-w-[400px]" />
 					<div className="flex flex-col w-full">
 						<OpenInCard
 							image={Youtube}
@@ -45,8 +45,8 @@ const OpenInCard = ({ image, text, action }) => {
 		<div className="bg-white/20 rounded-lg w-full flex gap-4 group items-center shadow-xl p-4 my-4 cursor-pointer hover:scale-[101%]"
 			onClick={action}
 		>
-			<img src={image} alt={text} className="h-10" />
-			<h2 className="text-xl text-gray-200 group-hover:text-white">{text}</h2>
+			<img src={image} alt={text} className="h-5 md:h-8 xl:h-10" />
+			<h2 className="text-md md:text-xl text-gray-200 group-hover:text-white">{text}</h2>
 		</div>
 	);
 }

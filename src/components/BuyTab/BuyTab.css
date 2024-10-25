@@ -78,7 +78,7 @@
   right: -100%;
   transition: 850ms;
   z-index: 1000;
-  box-shadow: 0px 0px 20px goldenrod;
+  box-shadow: 0px 0px 20px #daa52050;
 }
 
 @media screen and (min-width: 700px) {
@@ -96,6 +96,7 @@
 .nav-menu.active {
   right: 0;
   transition: 350ms;
+  box-shadow: 0px 0px 20px #daa520;
 }
 
 .nav-menu-items {
