@@ -6,6 +6,7 @@ import Goblins from "../../images/image_bot_goblins.webp";
 import { VideoPlayer } from "../Video/Video";
 import { motion } from "framer-motion";
 import { IoCloseSharp } from "react-icons/io5";
+import play from "../../images/play.svg";
 
 function ImageBottom() {
   const [offsetY, setOffsetY] = useState(0);
@@ -75,13 +76,13 @@ function ImageBottom() {
 const Video = () => {
   const [clicked, setClicked] = useState(false);
   return (
-    <div className="flex top-0 left-0 z-50 w-full items-center justify-center pointer-events-none h-full absolute font-black">
+    <div className="flex top-0 left-0 z-50 w-full items-center justify-center pointer-events-none h-full absolute">
       {!clicked ? (
         <span
-          className="text-6xl xl:text-[150px] blink text-yellow-200 pointer-events-auto cursor-pointer font-sans"
+          className="text-4xl xl:text-[110px] blink text-yellow-200 pointer-events-auto cursor-pointer"
           onClick={() => setClicked(true)}
         >
-          ▶
+          <img src={play} alt="play" className="w-24 xl:w-32"/>
         </span>
       ) : (
         <motion.div
