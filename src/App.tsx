@@ -1,12 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Cancel from "./components/buy_tab/Cancel";
-import Success from "./components/buy_tab/Success";
-import Guide from "./components/guide/Guide";
+import Cancel from "./components/BuyTab/Cancel";
+import Success from "./components/BuyTab/Success";
 import Home from "./Home";
-import { Auction } from "./components/Auction/Auction";
+
 import { AuthContextProvider } from "./Auth/AuthContext";
-import Header from "./components/header/header";
-import { useState } from "react";
+import "./content/i18n";
+import HashibanInstructions from "./components/Guide/Guide";
 
 function App() {
   return (
@@ -14,10 +13,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/instrucciones" element={<Guide />} />
           <Route path="/success" element={<Success />} />
           <Route path="/cancel" element={<Cancel />} />
-          <Route path="/subasta" element={<Auction />} />
+          <Route path="/guide" element={<HashibanInstructions />} />
+          <Route path="/instrucciones" element={<HashibanInstructions />} />
         </Routes>
       </Router>
     </AuthContextProvider>

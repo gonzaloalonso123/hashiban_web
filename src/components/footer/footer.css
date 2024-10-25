@@ -26,3 +26,7 @@
 .std-button.ig-icon:hover {
 	background-color: blueviolet;
 }
+
+.std-button.contact-icon:hover {
+	@apply bg-blue-500
+}

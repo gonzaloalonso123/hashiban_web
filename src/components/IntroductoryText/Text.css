@@ -1,0 +1,70 @@
+.introduction-section {
+  background: linear-gradient(to top, transparent, #000000);
+  padding-top: 2%;
+  padding-bottom: 5%;
+}
+
+@font-face {
+  font-family: alkalami;
+  src: url(../../fonts/Alkalami-Regular.ttf);
+}
+
+/* .introduction {
+	padding-top: 5%;
+	text-shadow: 2px 5px #000000;
+	text-align: justify;
+	font-size: 1.2em;
+	width: 70%;
+	z-index: 100;
+	padding-bottom: 5%;
+	border: 2px solid rgba(180, 140, 30, 0.7);
+	border-radius: 2em;
+	background-image: repeating-linear-gradient(36deg, rgba(122, 69, 24, 0.55), rgba(112, 63, 16, 0.85) 1px, transparent 0px, transparent 2px);
+	background-size: 12px;
+} */
+
+.introduction {
+  margin: auto;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  line-height: 1.5em;
+  max-width: 90ch;
+  width: 90%;
+  text-align: justify;
+  font-family: sourceserif;
+  font-family: cabin;
+}
+
+@media screen and (min-width: 1000px) {
+  .introduction {
+    width: 70%;
+    margin-left: 25%;
+  }
+}
+
+.book-merchant {
+  margin-top: 45px;
+  width: 140px;
+  height: auto;
+  background: linear-gradient(to top, transparent, #000000);
+  border-radius: 50%;
+  border: 2px solid rgba(180, 140, 30, 0.7);
+}
+
+.book-merchant-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  padding-bottom: 3rem;
+  width: 100%;
+}
+
+.scroll-text {
+  line-height: 1.2em;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: black;
+  width: 78%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 100px;
+}

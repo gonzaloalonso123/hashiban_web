@@ -1,0 +1,63 @@
+.video_wrapper {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* background: url("../../images/empty_horizontal.webp"); */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  max-width: 960px;
+}
+
+.video_container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 2em;
+  overflow: hidden;
+  max-width: 960px;
+  z-index: 1;
+  cursor: pointer; /* Adds a pointer cursor to indicate the video is clickable */
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  z-index: 10;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.play-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.play-button:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 25px solid white;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+.video_wrapper:hover .play-button {
+  opacity: 1;
+}
+
+@media screen and (min-width: 1000px) {
+  .video_wrapper {
+    margin-left: 10%;
+  }
+}
+
+.video_wrapper.playing .play-button {
+  display: none; /* Hide the play button when the video is playing */
+}

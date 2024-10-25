@@ -1,0 +1,158 @@
+.image-top_section {
+  position: relative;
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  animation: opacity-in 0.1s;
+  background-color: black;
+}
+
+.image-top_section::-webkit-scrollbar {
+  display: none;
+}
+
+.image-top_section img {
+  position: absolute;
+  object-position: top left;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  height: 90vh;
+}
+
+.image-top_section img#abajo:hover {
+  transform: scale(1.1);
+}
+
+.image-top_section img#bat {
+  z-index: 5;
+  pointer-events: none;
+}
+
+.image-top_section img#demon {
+  overflow-x: hidden;
+  right: -20%;
+}
+
+.image-top_section img#lights {
+  z-index: 7;
+  animation: opacity-breathe 4s infinite;
+}
+
+@media screen and (min-width: 0) {
+  #wall {
+    position: absolute;
+  }
+  .image-top_section img {
+    height: 85vh;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .image-top_section img#tabern,
+  img#lights {
+    animation: move-background 6s;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .image-top_section {
+    height: 90vh;
+  }
+
+  .image-top_section img#abajo {
+    opacity: 1;
+  }
+
+  .image-top_section img {
+    height: 90vh;
+  }
+
+  #wall {
+    position: fixed;
+    height: 100vh;
+  }
+
+  .image-top_section img#tabern,
+  img#lights {
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    animation: zoom-background 6s;
+  }
+}
+
+#wall {
+  pointer-events: none;
+  z-index: 500;
+}
+
+@keyframes opacity-in {
+  0% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.image-top_flex {
+  object-position: top left;
+}
+
+@keyframes opacity-breathe {
+  0% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes move-background {
+  0% {
+    left: -400px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes zoom-background {
+  0% {
+    scale: 0.95;
+    opacity: 0.3;
+  }
+
+  55% {
+    opacity: 1;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes arrow-bottom-animation {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.2;
+  }
+
+  100% {
+    scale: 1;
+  }
+}

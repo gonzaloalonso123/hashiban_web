@@ -1,45 +1,31 @@
 header {
-	position: fixed;
-	width: 100%;
-	padding-top: 1%;
-	padding-bottom: 1%;
-	justify-content: space-between;
-	align-items: center;
-	z-index: 750;
-	transition: 0.6s;
+  position: fixed;
+  justify-content: space-between;
+  z-index: 750;
+  transition: 0.6s;
 }
 
-/* phones */
-@media screen and (max-width:1158px){
-	header{
-		display: inline-block;
-		text-align: center;
-	}
-	header nav a {
-		line-height: 1.6em;
-	}
+@media screen and (max-width: 1158px) {
+  header {
+    display: inline-block;
+    text-align: center;
+  }
 }
 
-/* pc */
-@media screen and (min-width:1158px){
-	header{
-		display: flex;
-	}
-	header .logo{
-		margin-left: 20px;
-	}
+@media screen and (min-width: 1158px) {
+  header {
+    display: flex;
+  }
+  header nav {
+    margin-right: 3em;
+	margin-top: 1em;
+  }
 }
 
 header .logo {
-	display: block;
-	font-size: clamp(3rem, 2.8vw, 6rem); 
-	text-shadow: 1px 1px black;
-	font-family: font;
+  display: block;
+  font-size: clamp(1.8rem, 2.5vw, 4rem);
+  text-shadow: 1px 1px black;
+  font-family: font;
+  margin-left: 0.5em;
 }
-
-header nav {
-	display: flex;
-	justify-content: center ;
-	font-family: cabin;
-}
-

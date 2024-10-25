@@ -1,8 +1,6 @@
 import "./header.css";
-import Logo from "../../images/logo.png";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import One from "../../images/uno.png";
+import { useTranslation } from "react-i18next";
 
 interface props {
   setBuyTab: any;
@@ -10,6 +8,7 @@ interface props {
 }
 
 function Header({ setBuyTab, buyTab }: props) {
+  const { t } = useTranslation();
   const [blackHeader, setBlackHeader] = useState(false);
 
   const handleScroll = () => {
@@ -28,21 +27,27 @@ function Header({ setBuyTab, buyTab }: props) {
   }, []);
 
   return (
-    <header style={{ backgroundColor: blackHeader ? "#111111" : "" }}>
+    <header
+      className={`${
+        blackHeader
+          ? "bg-gradient-to-b from-black to-black xl:to-transparent"
+          : ""
+      } py-2 w-full fixed flex justify-between flex-col xl:flex-row`}
+    >
       <div>
-        <a className="logo">La subasta de Hashiban</a>
+        <a className="logo">{t("game_name")}</a>
       </div>
       <nav>
-        <a onClick={handleBuyBar} className="std-button">
-          Comprar
-        </a>
-        <Link to="/instrucciones" className="std-button">
-          Instrucciones
-        </Link>
-        <Link to="/subasta" className="std-button">
+        <button
+          onClick={handleBuyBar}
+          className="text-lg xl:text-xl px-4 py-1 bg-blue-800 hover:bg-blue-500 transition-all hover:shadow-md font-black rounded-xl shadow-md"
+        >
+          {t("buy")}
+        </button>
+        {/* <Link to="/subasta" className="std-button">
           Subastas
           <img src={One} className="std-button-notification" />
-        </Link>
+        </Link> */}
       </nav>
     </header>
   );
