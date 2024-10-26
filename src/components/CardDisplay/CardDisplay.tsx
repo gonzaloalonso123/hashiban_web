@@ -4,7 +4,7 @@ import arrowL from "../../images/izqda.png";
 import arrowR from "../../images/dcha.png";
 import descriptions from "../../content/descriptions";
 import { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import box from "../../images/producto2.png";
 
@@ -85,16 +85,20 @@ const CardDisplay = () => {
                 className="cursor-pointer h-16 my-auto"
                 onClick={() => handleArrowClick("-")}
               />
-              <img
-                className="rounded-xl w-1/3 shadow-md"
+              <motion.img
+                key={currentCard}
                 src={t(cards[currentCard])}
-                alt=""
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ x: 0, opacity: 1 }}
+                className="rounded-xl w-1/3 shadow-md"
+                exit={{ opacity: 0, scale: 0, x: -20 }}
               />
               <img
                 src={arrowR}
                 className="cursor-pointer h-16 my-auto"
                 onClick={() => handleArrowClick("+")}
               />
+              {/* <img src={t(cards[currentCard])} alt="" /> */}
             </div>
             <div className="pb-16 lg:pb-2">
               <p className="description">
