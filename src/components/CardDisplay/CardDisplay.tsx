@@ -1,18 +1,35 @@
+import { useRef, useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import "./CardDisplay.css";
 import cards from "../../content/IntroductionImages";
 import arrowL from "../../images/izqda.png";
 import arrowR from "../../images/dcha.png";
 import descriptions from "../../content/descriptions";
-import { useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
 import box from "../../images/producto2.png";
 
 const CardDisplay = () => {
   const [currentCard, setCurrentCard] = useState(0);
   const { t } = useTranslation();
   const [opened, setOpened] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   const boxRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const preloadImages = async () => {
+      const promises = cards.map((card) => {
+        return new Promise<void>((resolve) => {
+          const img = new Image();
+          img.src = t(card);
+          img.onload = () => resolve();
+        });
+      });
+      await Promise.all(promises);
+      setImagesLoaded(true);
+    };
+
+    preloadImages();
+  }, [t]);
 
   const openBox = () => {
     if (boxRef?.current) {
@@ -71,47 +88,48 @@ const CardDisplay = () => {
             />
           </div>
         ) : (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3 }}
-          >
-            <h1 className="text-4xl text-center text-black font-hashiban mt-24 mb-8">
-              {t("game_content")}
-            </h1>
-            <div className="description-carousel">
-              <img
-                src={arrowL}
-                className="cursor-pointer h-16 my-auto"
-                onClick={() => handleArrowClick("-")}
-              />
-              <motion.img
-                key={currentCard}
-                src={t(cards[currentCard])}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ x: 0, opacity: 1 }}
-                className="rounded-xl w-1/3 shadow-md"
-                exit={{ opacity: 0, scale: 0, x: -20 }}
-              />
-              <img
-                src={arrowR}
-                className="cursor-pointer h-16 my-auto"
-                onClick={() => handleArrowClick("+")}
-              />
-              {/* <img src={t(cards[currentCard])} alt="" /> */}
-            </div>
-            <div className="pb-16 lg:pb-2">
-              <p className="description">
-                <h2 className="w-full justify-center text-black my-6 flex items-center text-center gap-4">
-                  <div className="rounded-md p-1 bg-[#956b00] shadow-md text-white border border-black font-black">
-                    {descriptions[currentCard].number}
-                  </div>
-                  {t(descriptions[currentCard].name)}
-                </h2>
-                {t(descriptions[currentCard].description)}
-              </p>
-            </div>
-          </motion.div>
+          imagesLoaded && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <h1 className="text-4xl text-center text-black font-hashiban mt-24 mb-8">
+                {t("game_content")}
+              </h1>
+              <div className="description-carousel">
+                <img
+                  src={arrowL}
+                  className="cursor-pointer h-16 my-auto"
+                  onClick={() => handleArrowClick("-")}
+                />
+                <motion.img
+                  key={currentCard}
+                  src={t(cards[currentCard])}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  className="rounded-xl w-1/3 shadow-md"
+                  exit={{ opacity: 0, scale: 0, x: -20 }}
+                />
+                <img
+                  src={arrowR}
+                  className="cursor-pointer h-16 my-auto"
+                  onClick={() => handleArrowClick("+")}
+                />
+              </div>
+              <div className="pb-16 lg:pb-2">
+                <p className="description">
+                  <h2 className="w-full justify-center text-black my-6 flex items-center text-center gap-4">
+                    <div className="rounded-md p-1 bg-[#956b00] shadow-md text-white border border-black font-black">
+                      {descriptions[currentCard].number}
+                    </div>
+                    {t(descriptions[currentCard].name)}
+                  </h2>
+                  {t(descriptions[currentCard].description)}
+                </p>
+              </div>
+            </motion.div>
+          )
         )}
       </div>
     </motion.div>
