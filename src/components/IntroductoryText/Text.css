@@ -34,6 +34,14 @@
   font-family: cabin;
 }
 
+.text-container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
 @media screen and (min-width: 1000px) {
   .introduction {
     width: 70%;

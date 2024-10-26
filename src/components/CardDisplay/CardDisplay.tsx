@@ -108,7 +108,7 @@ const CardDisplay = () => {
                   src={t(cards[currentCard])}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ x: 0, opacity: 1 }}
-                  className="rounded-xl w-2/5 xl:w-1/3 shadow-md height-auto drop-shadow-2xl"
+                  className="rounded-xl w-1/2 xl:w-1/3 shadow-md drop-shadow-2xl"
                   exit={{ opacity: 0, scale: 0, x: -20 }}
                 />
                 <img

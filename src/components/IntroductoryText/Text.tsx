@@ -33,7 +33,7 @@ const TextWitMerchant = ({ text }: props) => (
           whileInView={{ opacity: 1, scale: 1 }}
         />
       </div>
-      <div className="description-carousel">
+      <div className="text-container">
         <p className="scroll-text">{text}</p>
       </div>
     </motion.div>
