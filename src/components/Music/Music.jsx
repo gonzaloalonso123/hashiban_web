@@ -23,16 +23,16 @@ export const Music = () => {
 					<div className="flex flex-col w-full">
 						<OpenInCard
 							image={Youtube}
-							text="Open In Youtube"
+							text={t('open_in_youtube')}
 						/>
 						<OpenInCard
 							image={Spotify}
-							text="Open In Spotify"
+							text={t('open_in_spotify')}
 							action={() => window.open("https://open.spotify.com/intl-es/album/1zhm260xqksGv5iw73wgWH?si=7uXhIbYWTieRjD93UcOcJg", "_blank")}
 						/>
 						<OpenInCard
 							image={Mail}
-							text="Receive through email"
+							text={t('receive_by_email')}
 						/>
 					</div>
 				</div></div>
