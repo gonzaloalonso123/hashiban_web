@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   width: 90%;
+  height: 230px;
   margin: auto;
   text-align: center;
 }
@@ -37,6 +38,9 @@
 @media screen and (min-width: 1000px) {
   .container {
     margin-left: 35%;
+  }
+  .description-carousel {
+    height: 230px;
   }
 }
 

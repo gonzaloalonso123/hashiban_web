@@ -108,7 +108,7 @@ const CardDisplay = () => {
                   src={t(cards[currentCard])}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ x: 0, opacity: 1 }}
-                  className="rounded-xl w-2/5 xl:w-1/3 shadow-md"
+                  className="rounded-xl w-2/5 xl:w-1/3 shadow-md height-auto drop-shadow-2xl"
                   exit={{ opacity: 0, scale: 0, x: -20 }}
                 />
                 <img
@@ -119,11 +119,11 @@ const CardDisplay = () => {
               </div>
               <div className="pb-16 lg:pb-2">
                 <p className="description">
-                  <h2 className="w-full justify-center text-black my-6 flex items-center text-center gap-4">
+                  <h2 className="w-full justify-center text-black my-6 flex items-center text-center">
                     <div className="rounded-md p-1 bg-[#956b00] shadow-md text-white border border-black font-black">
                       {descriptions[currentCard].number}
                     </div>
-                    {t(descriptions[currentCard].name)}
+                    <span className="font-bold text-black">{t(descriptions[currentCard].name)}</span>
                   </h2>
                   {t(descriptions[currentCard].description)}
                 </p>
