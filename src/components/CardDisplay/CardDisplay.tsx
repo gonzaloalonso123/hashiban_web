@@ -100,7 +100,7 @@ const CardDisplay = () => {
               <div className="description-carousel">
                 <img
                   src={arrowL}
-                  className="cursor-pointer h-16 my-auto"
+                  className="cursor-pointer h-10 xl:h-16 my-auto"
                   onClick={() => handleArrowClick("-")}
                 />
                 <motion.img
@@ -108,12 +108,12 @@ const CardDisplay = () => {
                   src={t(cards[currentCard])}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ x: 0, opacity: 1 }}
-                  className="rounded-xl w-1/3 shadow-md"
+                  className="rounded-xl w-2/5 xl:w-1/3 shadow-md"
                   exit={{ opacity: 0, scale: 0, x: -20 }}
                 />
                 <img
                   src={arrowR}
-                  className="cursor-pointer h-16 my-auto"
+                  className="cursor-pointer h-10 xl:h-16 my-auto"
                   onClick={() => handleArrowClick("+")}
                 />
               </div>
