@@ -6,7 +6,7 @@ import cards from "../../content/IntroductionImages";
 import arrowL from "../../images/izqda.png";
 import arrowR from "../../images/dcha.png";
 import descriptions from "../../content/descriptions";
-import box from "../../images/producto2.png";
+import box from "../../images/game_box.webp";
 
 const CardDisplay = () => {
   const [currentCard, setCurrentCard] = useState(0);
@@ -75,16 +75,18 @@ const CardDisplay = () => {
     >
       <div className="scroll transition-all duration-100">
         {!opened ? (
-          <div className="flex flex-col py-24 items-center justify-center">
+          <div className="flex flex-col pb-24 pt-16 items-center justify-center">
             <h1 className="text-4xl text-center text-black font-hashiban">
               {t("game_content")}
             </h1>
             <p className="text-black text-xs mb-10">({t("click_to_see")})</p>
-            <img
+            <motion.img
               src={box}
               ref={boxRef}
-              className="cursor-pointer hover:scale-105 transform transition-all duration-300 w-1/3 brightness-95 hover:drop-shadow-xl hover:brightness-100"
+              className="cursor-pointer transform transition-all duration-300 w-1/2 brightness-95 hover:drop-shadow-xl hover:brightness-100"
               onClick={openBox}
+			  whileHover={{ scale: 1.05 }}
+			  transition={{ duration: 0.1 }}
             />
           </div>
         ) : (
@@ -94,7 +96,7 @@ const CardDisplay = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3 }}
             >
-              <h1 className="text-4xl text-center text-black font-hashiban mt-24 mb-8">
+              <h1 className="text-4xl text-center text-black font-hashiban mt-16 mb-8">
                 {t("game_content")}
               </h1>
               <div className="description-carousel">
