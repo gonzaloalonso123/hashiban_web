@@ -85,25 +85,26 @@ const CardDisplay = () => {
               ref={boxRef}
               className="cursor-pointer transform transition-all duration-300 w-1/2 brightness-95 hover:drop-shadow-xl hover:brightness-100"
               onClick={openBox}
-			  whileHover={{ scale: 1.05 }}
-			  transition={{ duration: 0.1 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.1 }}
             />
           </div>
         ) : (
           imagesLoaded && (
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3 }}
             >
               <h1 className="text-4xl text-center text-black font-hashiban mt-16 mb-8">
                 {t("game_content")}
               </h1>
               <div className="description-carousel">
-                <img
+                <motion.img
                   src={arrowL}
                   className="cursor-pointer h-10 xl:h-16 my-auto"
                   onClick={() => handleArrowClick("-")}
+                  whileHover={{ scale: 1.05 }}
                 />
                 <motion.img
                   key={currentCard}
@@ -113,7 +114,8 @@ const CardDisplay = () => {
                   className="rounded-xl w-1/2 xl:w-1/3 shadow-md drop-shadow-2xl aspect-auto"
                   exit={{ opacity: 0, scale: 0, x: -20 }}
                 />
-                <img
+                <motion.img
+                  whileHover={{ scale: 1.05 }}
                   src={arrowR}
                   className="cursor-pointer h-10 xl:h-16 my-auto"
                   onClick={() => handleArrowClick("+")}
@@ -125,7 +127,9 @@ const CardDisplay = () => {
                     <div className="rounded-md p-1 bg-[#956b00] shadow-md text-white border border-black font-black">
                       {descriptions[currentCard].number}
                     </div>
-                    <span className="font-bold text-black">{t(descriptions[currentCard].name)}</span>
+                    <span className="font-bold text-black">
+                      {t(descriptions[currentCard].name)}
+                    </span>
                   </h2>
                   {t(descriptions[currentCard].description)}
                 </p>

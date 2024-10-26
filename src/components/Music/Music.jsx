@@ -18,7 +18,7 @@ export const Music = () => {
 			<div className="xl:ml-48">
 				<h1 className="text-4xl font-hashiban text-white">♪ {t("music_title")}</h1>
 				<p className="text-sm xl:text-xl py-4">{t("music_subtitle")}</p>
-				<div className="flex flex-col md:flex-row items-center gap-4 w-full">
+				<div className="flex flex-col md:flex-row gap-4 w-full">
 					<img src={MusicImage} alt="Music" className="rounded-md w-full max-w-[400px]" />
 					<div className="flex flex-col w-full">
 						<OpenInCard
