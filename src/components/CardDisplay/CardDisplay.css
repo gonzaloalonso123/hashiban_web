@@ -68,3 +68,28 @@ h1.title {
   text-decoration: none;
   font-family: font;
 }
+
+@keyframes openBox {
+  0% {
+    transform: scale(0.9);
+  }
+  25% {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+  }
+  50% {
+    transform: scale(0.9);
+    filter: brightness(1);
+  }
+  75% {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.open-box {
+  animation: openBox 0.6s;
+}

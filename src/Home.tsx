@@ -11,6 +11,7 @@ import Contact from "./components/Contact/Contact";
 import { useTranslation } from "react-i18next";
 import { Music } from "./components/Music/Music";
 import ImageBottom from "./components/ImageBot/ImageBottom";
+import { ScrollProvider } from "./providers/ScrollProvider";
 
 function Home() {
   const [loaded, setLoaded] = useState(false);
@@ -18,23 +19,25 @@ function Home() {
   const [contactEnabled, setContactEnabled] = useState(false);
   const { t } = useTranslation();
   return (
-    <div className="main">
-      {contactEnabled && <Contact setContactEnabled={setContactEnabled} />}
-      <NavBar setBuyTab={setBuyTab} buyTab={buyTab} />
-      <Header setBuyTab={setBuyTab} buyTab={buyTab} />
-      <ImageTop setLoaded={setLoaded} />
-      {!loaded && <Spinner />}
-      {loaded && (
-        <>
-          <TextWitMerchant text={t("description")} />
-          <ImageBottom />
-          <BasicInfo />
-          <Music />
-          {/* <Obtain openBuyTab={() => setBuyTab(true)} /> */}
-          <Footer setContactEnabled={setContactEnabled} />
-        </>
-      )}
-    </div>
+    <ScrollProvider>
+      <div className="main">
+        {contactEnabled && <Contact setContactEnabled={setContactEnabled} />}
+        <NavBar setBuyTab={setBuyTab} buyTab={buyTab} />
+        <Header setBuyTab={setBuyTab} buyTab={buyTab} />
+        <ImageTop setLoaded={setLoaded} />
+        {!loaded && <Spinner />}
+        {loaded && (
+          <>
+            <TextWitMerchant text={t("description")} />
+            <ImageBottom />
+            <BasicInfo />
+            <Music />
+            {/* <Obtain openBuyTab={() => setBuyTab(true)} /> */}
+            <Footer setContactEnabled={setContactEnabled} />
+          </>
+        )}
+      </div>
+    </ScrollProvider>
   );
 }
 

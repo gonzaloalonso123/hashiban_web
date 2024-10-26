@@ -6,6 +6,7 @@ import Home from "./Home";
 import { AuthContextProvider } from "./Auth/AuthContext";
 import "./content/i18n";
 import HashibanInstructions from "./components/Guide/Guide";
+import { ScrollProvider } from "./providers/ScrollProvider";
 
 function App() {
   return (

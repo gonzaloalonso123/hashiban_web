@@ -6,40 +6,32 @@ import WallImg from "../../images/wall.webp";
 import TabernImg from "../../images/tabern.webp";
 import Lights from "../../images/lights4.png";
 import { useTranslation } from "react-i18next";
+import { useScroll } from "../../providers/ScrollProvider";
 
 interface imageTopProps {
   setLoaded: React.Dispatch<React.SetStateAction<any>>;
 }
 function ImageTop({ setLoaded }: imageTopProps) {
-  const [offsetY, setOffsetY] = useState(0);
   const [parentHeight, setParentHeight] = useState(0);
-  const [scrollVisible, setScrollVisible] = useState(true);
+  const scrollPosition = useScroll();
   const imageRef = useRef<HTMLImageElement>(null);
 
-  const handleScroll = () => {
-    setOffsetY(window.scrollY);
+  const handleResize = () => {
     if (imageRef.current != null) {
       setParentHeight(imageRef.current.height);
-      if (imageRef.current?.scrollLeft > 0) {
-        setScrollVisible(false);
-      } else {
-        setScrollVisible(true);
-      }
     }
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("wheel", handleScroll);
-    window.addEventListener("resize", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const handleImageLoad = () => {
-    if (imageRef.current != null) {
-      setParentHeight(imageRef.current.height);
-      setLoaded(true);
-    }
+    handleResize();
+    setLoaded(true);
   };
 
   return (
@@ -57,15 +49,15 @@ function ImageTop({ setLoaded }: imageTopProps) {
           alt=""
           id="tabern"
           style={{
-            opacity: 1 - offsetY / 800,
-            transform: `translateX(${offsetY * -0.1}px)`,
+            opacity: 1 - scrollPosition / 800,
+            transform: `translateX(${scrollPosition * -0.1}px)`,
           }}
         />
         <img
           src={Lights}
           alt=""
           id="lights"
-          style={{ transform: `translateX(${offsetY * -0.1}px)` }}
+          style={{ transform: `translateX(${scrollPosition * -0.1}px)` }}
         />
         <img src={DemonImg} alt="" id="demon" />
         <img
@@ -79,8 +71,8 @@ function ImageTop({ setLoaded }: imageTopProps) {
           alt=""
           id="bat"
           style={{
-            transform: `translateX(${offsetY * -0.05}px) translateY(${
-              offsetY * -0.1
+            transform: `translateX(${scrollPosition * -0.05}px) translateY(${
+              scrollPosition * -0.1
             }px)`,
           }}
         />

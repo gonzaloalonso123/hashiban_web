@@ -1,6 +1,7 @@
 import "./Text.css";
 import BookMerchant from "../../images/book_merchant.png";
 import { motion } from "framer-motion";
+import { useScroll } from "../../providers/ScrollProvider";
 
 interface props {
   text: string;

@@ -7,26 +7,23 @@ import { VideoPlayer } from "../Video/Video";
 import { motion } from "framer-motion";
 import { IoCloseSharp } from "react-icons/io5";
 import play from "../../images/play.svg";
+import { useScroll } from "../../providers/ScrollProvider";
 
 function ImageBottom() {
-  const [offsetY, setOffsetY] = useState(0);
   const [parentHeight, setParentHeight] = useState(0);
   const imageRef = useRef<HTMLImageElement>(null);
   const imageRefContainer = useRef<HTMLImageElement>(null);
-
-  const handleScroll = () => {
-    setOffsetY(window.scrollY);
+  const scrollPosition = useScroll();
+  const handleResize = () => {
     if (imageRef.current != null) {
       setParentHeight(imageRef.current.height);
     }
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleScroll);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -38,9 +35,8 @@ function ImageBottom() {
   };
 
   return (
-    <div id="image-bot_flex" style={{ left: offsetY }}>
+    <div id="image-bot_flex" style={{ left: scrollPosition }}>
       <div className="relative">
-        {/* {isPhone && <Arrow />} */}
         <Video />
         <div
           className="image-bot_section"
@@ -52,7 +48,7 @@ function ImageBottom() {
           <img
             src={Shine}
             id="shine"
-            style={{ transform: `translateX(${offsetY * -0.1}px)` }}
+            style={{ transform: `translateX(${scrollPosition * -0.1}px)` }}
           />
           <img
             src={Background}
@@ -65,7 +61,7 @@ function ImageBottom() {
             src={Goblins}
             alt=""
             id="goblins"
-            style={{ transform: `translateX(${0.05 * -offsetY}px)` }}
+            style={{ transform: `translateX(${0.05 * -scrollPosition}px)` }}
           />
         </div>
       </div>
@@ -82,7 +78,7 @@ const Video = () => {
           className="text-4xl xl:text-[110px] blink text-yellow-200 pointer-events-auto cursor-pointer"
           onClick={() => setClicked(true)}
         >
-          <img src={play} alt="play" className="w-20 xl:w-32"/>
+          <img src={play} alt="play" className="w-20 xl:w-32" />
         </span>
       ) : (
         <motion.div
