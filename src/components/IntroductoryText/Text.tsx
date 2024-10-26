@@ -20,9 +20,9 @@ const TextWitMerchant = ({ text }: props) => (
   <div>
     <motion.div
       className="container"
-      initial={{ opacity: 0, scale: 0.5 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.3 }}
+      initial={{ opacity: 0, scaleY: 0.4 }}
+      whileInView={{ opacity: 1, scaleY: 1 }}
+      transition={{ duration: 0.5 }}
     >
       <div className="book-merchant-container">
         <motion.img

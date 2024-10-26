@@ -7,6 +7,7 @@ import TabernImg from "../../images/tabern.webp";
 import Lights from "../../images/lights4.png";
 import { useTranslation } from "react-i18next";
 import { useScroll } from "../../providers/ScrollProvider";
+import { motion } from "framer-motion";
 
 interface imageTopProps {
   setLoaded: React.Dispatch<React.SetStateAction<any>>;
@@ -76,8 +77,8 @@ function ImageTop({ setLoaded }: imageTopProps) {
             }px)`,
           }}
         />
+        <HeroText />
       </div>
-      {/* <HeroText /> */}
     </div>
   );
 }
@@ -85,16 +86,19 @@ function ImageTop({ setLoaded }: imageTopProps) {
 const HeroText = () => {
   const { t } = useTranslation();
   return (
-    <div className="w-4/5 max-w-[800px] z-20 mx-auto -translate-y-48">
-      <h1
-        className="drop-shadow-lg text-white text-center font-hashiban"
-        style={{
-          fontSize: "7em",
-        }}
-      >
-        {t("hero_text")}
+    <motion.div
+      className="w-4/5 max-w-[800px] z-20 mt-48 opacity-100 ml-96 invisible xl:visible"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}	
+    >
+      <h1 className=" text-gray-200  font-hashiban text-6xl drop-shadow-hero">
+        La subasta de Hashiban
       </h1>
-    </div>
+      <p className="drop-shadow-hero text-gray-200 font-hashiban text-xl max-w-xl">
+        El juego de cartas de subastas y trasgos
+      </p>
+    </motion.div>
   );
 };
 

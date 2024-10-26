@@ -35,7 +35,7 @@ function Header({ setBuyTab, buyTab }: props) {
       } py-2 w-full fixed flex justify-between flex-col xl:flex-row`}
     >
       <div>
-        <a className="logo">{t("game_name")}</a>
+        <a className="logo xl:invisible">{t("game_name")}</a>
       </div>
       <nav>
         <button
