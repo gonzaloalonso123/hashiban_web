@@ -65,11 +65,11 @@ function NavBar({ setBuyTab, buyTab }: props) {
               </label> */}
               <img src={GameBox} alt="" className="w-1/3" />
               <ul className="mt-8 list-disc">
-                <li className="text-xl">{t("game_with_x_cards")}</li>
-                <li className="text-xl">{t("free_delivery")}</li>
+                <li className="text-sm">{t("game_with_x_cards")}</li>
+                <li className="text-sm">{t("free_delivery")}</li>
               </ul>
               <div className="flex flex-col items-center mt-8">
-                <h1 className="text-6xl">19.95 €</h1>
+                <h1 className="text-4xl">19.95 €</h1>
               </div>
               <button
                 className="buyButton disabled:bg-gray-500 disabled:hover:bg-gray-500"
