@@ -23,7 +23,6 @@ header {
 }
 
 header .logo {
-  display: block;
   font-size: clamp(1.8rem, 2.5vw, 4rem);
   text-shadow: 1px 1px black;
   font-family: font;

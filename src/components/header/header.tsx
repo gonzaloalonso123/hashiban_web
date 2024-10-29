@@ -36,14 +36,15 @@ function Header({ setBuyTab, buyTab }: props) {
           : ""
       } py-2 w-full fixed flex justify-between flex-col xl:flex-row`}
     >
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-        <a
-          className={`logo xl:hidden`}
-        >
-          {t("game_name")}
-        </a>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className={`logo ${blackHeader ? "" : "xl:hidden"}`}
+      >
+        {t("game_name")}
       </motion.div>
-      <nav>
+      {!blackHeader && <div />}
+      <nav className="self-end">
         <button
           onClick={handleBuyBar}
           className="text-lg xl:text-xl px-4 py-1 bg-blue-800 hover:bg-blue-500 transition-all hover:shadow-md font-black rounded-xl shadow-md"
