@@ -4,7 +4,7 @@ import './Spinner.css';
 function Spinner() {
   return (
     <div className="spinner">
-      <div className="circle"></div>
+      {/* <div className="circle"></div> */}
     </div>
   );
 }

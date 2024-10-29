@@ -36,10 +36,19 @@ function Header({ setBuyTab, buyTab }: props) {
           : ""
       } py-2 w-full fixed flex justify-between flex-col xl:flex-row`}
     >
+      {blackHeader && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className={`logo hidden xl:block`}
+        >
+          {t("game_name")}
+        </motion.div>
+      )}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className={`logo ${blackHeader ? "" : "xl:hidden"}`}
+        className={`logo xl:hidden`}
       >
         {t("game_name")}
       </motion.div>
