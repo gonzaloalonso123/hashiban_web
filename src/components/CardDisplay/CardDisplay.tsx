@@ -75,7 +75,7 @@ const CardDisplay = () => {
     >
       <div className="transition-all duration-100">
         {!opened ? (
-          <div className="flex flex-col pb-24 pt-16 items-center justify-center max-w-4xl mx-auto">
+          <div className="flex flex-col pb-24 pt-16 items-center justify-center">
             <h1 className="text-4xl text-center font-hashiban">
               {t("game_content")}
             </h1>
@@ -83,7 +83,7 @@ const CardDisplay = () => {
             <motion.img
               src={box}
               ref={boxRef}
-              className="cursor-pointer transform transition-all duration-300 w-1/4 brightness-95 hover:drop-shadow-xl hover:brightness-100"
+              className="cursor-pointer transform transition-all duration-300 max-w-md brightness-95 hover:drop-shadow-xl hover:brightness-100"
               onClick={openBox}
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.1 }}

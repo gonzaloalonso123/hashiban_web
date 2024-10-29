@@ -43,8 +43,8 @@ function Header({ setBuyTab, buyTab }: props) {
       >
         {t("game_name")}
       </motion.div>
-      {!blackHeader && <div />}
-      <nav className="self-end">
+      {!blackHeader && <div className="hidden xl:block" />}
+      <nav className="">
         <button
           onClick={handleBuyBar}
           className="text-lg xl:text-xl px-4 py-1 bg-blue-800 hover:bg-blue-500 transition-all hover:shadow-md font-black rounded-xl shadow-md"
