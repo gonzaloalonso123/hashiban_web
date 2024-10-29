@@ -90,7 +90,7 @@ const CardDisplay = () => {
             />
           </div>
         ) : ( */}
-        imagesLoaded && (
+        {/* imagesLoaded && ( */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -136,7 +136,7 @@ const CardDisplay = () => {
             </p>
           </div>
         </motion.div>
-        ){/* )} */}
+        {/* ) */}
       </div>
     </motion.div>
   );
