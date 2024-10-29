@@ -76,3 +76,9 @@
   text-align: center;
   margin-bottom: 100px;
 }
+
+.text-paragraph {
+	line-height: 1.2em;
+	font-size: clamp(1rem, 2.5vw, 1.2rem);
+	color: black;
+  }

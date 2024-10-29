@@ -7,7 +7,7 @@ module.exports = {
         hashiban: "font",
       },
       dropShadow: {
-        hero: "0 0 10px rgba(0,0,0,1)",
+        hero: "-1px 2px 8px #000",
       },
     },
   },

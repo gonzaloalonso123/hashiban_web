@@ -1,7 +1,6 @@
 import "./styles/App.css";
 import Header from "./components/Header/header";
 import ImageTop from "./components/ImageTop/ImageTop";
-import { TextWitMerchant } from "./components/IntroductoryText/Text";
 import { useState } from "react";
 import NavBar from "./components/BuyTab/BuyTab";
 import BasicInfo from "./components/BasicInfoDisplay/BasicInfo";
@@ -12,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import { Music } from "./components/Music/Music";
 import ImageBottom from "./components/ImageBot/ImageBottom";
 import { ScrollProvider } from "./providers/ScrollProvider";
+import { IntroductoryText } from "./components/IntroductoryText/IntroductoryText";
 
 function Home() {
   const [loaded, setLoaded] = useState(false);
@@ -28,7 +28,7 @@ function Home() {
         {!loaded && <Spinner />}
         {loaded && (
           <>
-            <TextWitMerchant text={t("description")} />
+            <IntroductoryText />
             <ImageBottom />
             <BasicInfo />
             <Music />
