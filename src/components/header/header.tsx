@@ -1,6 +1,8 @@
 import "./header.css";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useScroll } from "../../providers/ScrollProvider";
+import { motion } from "framer-motion";
 
 interface props {
   setBuyTab: any;
@@ -10,9 +12,10 @@ interface props {
 function Header({ setBuyTab, buyTab }: props) {
   const { t } = useTranslation();
   const [blackHeader, setBlackHeader] = useState(false);
+  const currentScroll = useScroll();
 
   const handleScroll = () => {
-    if (window.scrollY > document.body.scrollHeight / 10) {
+    if (currentScroll > document.body.scrollHeight / 10) {
       setBlackHeader(true);
     } else {
       setBlackHeader(false);
@@ -22,9 +25,8 @@ function Header({ setBuyTab, buyTab }: props) {
   const handleBuyBar = () => setBuyTab(!buyTab);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    handleScroll();
+  }, [currentScroll]);
 
   return (
     <header
@@ -34,9 +36,13 @@ function Header({ setBuyTab, buyTab }: props) {
           : ""
       } py-2 w-full fixed flex justify-between flex-col xl:flex-row`}
     >
-      <div>
-        <a className="logo xl:invisible">{t("game_name")}</a>
-      </div>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <a
+          className={`logo xl:hidden`}
+        >
+          {t("game_name")}
+        </a>
+      </motion.div>
       <nav>
         <button
           onClick={handleBuyBar}

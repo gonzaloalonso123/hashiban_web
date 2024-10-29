@@ -87,12 +87,12 @@ const HeroText = () => {
   const { t } = useTranslation();
   return (
     <motion.div
-      className="w-4/5 max-w-[800px] z-20 mt-48 opacity-100 ml-96 invisible xl:visible"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}	
+      className="w-4/5 max-w-[800px] z-20 mt-28 opacity-100 ml-96 invisible xl:visible"
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1, delay: 1 }}
     >
-      <h1 className=" text-gray-200  font-hashiban text-6xl drop-shadow-hero">
+      <h1 className=" text-gray-200  font-hashiban text-7xl drop-shadow-hero">
         La subasta de Hashiban
       </h1>
       <p className="drop-shadow-hero text-gray-200 font-hashiban text-xl max-w-xl">

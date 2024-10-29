@@ -56,35 +56,27 @@ const HashibanInstructions = () => {
 					</GameComponentCard>
 				</Section>
 				<Section title={t('guide_game_setup_title')} icon={<GiCardBurn className="text-2xl" />}>
-					<CardWithTitleAndText title={t('guide_card_distribution_title')}>
-						<Paragraph>
-							{t('guide_distribution_text_1')}
-						</Paragraph>
-						<List
-							items={[
-								`3 ${t('guide_merchants_title')}`,
-								`5 ${t('guide_bills_title')}`,
-								`1 ${t('guide_object_title')}`
-							]}
-						/>
-						<DetailsSection>
-							<ParagraphWithArrow>
-								{t('guide_distribution_text_2')}
-							</ParagraphWithArrow>
-							<ParagraphWithArrow>
-								{t('guide_distribution_text_3')}
-							</ParagraphWithArrow>
-							<ParagraphWithArrow>
-								{t('guide_distribution_text_4')}
-							</ParagraphWithArrow>
-						</DetailsSection>
-					</CardWithTitleAndText>
-					<CardWithTitleAndText title={t('guide_table_setup_title')}>
-						<Paragraph>
-							{t('guide_table_setup_text_1')}
-						</Paragraph>
-					</CardWithTitleAndText>
-				</Section>
+					<ParagraphWithNumber number={1}>
+						{t('guide_game_setup_text_1')}
+					</ParagraphWithNumber>
+					<ParagraphWithNumber number={2}>
+						{t('guide_game_setup_text_2')}
+					</ParagraphWithNumber>
+					<DetailsSection>
+						<ParagraphWithArrow>
+							{t('guide_game_setup_disclaimer_1')}
+						</ParagraphWithArrow>
+					</DetailsSection>
+					<ParagraphWithNumber number={3}>
+						{t('guide_game_setup_text_3')}
+					</ParagraphWithNumber>
+					<ParagraphWithNumber number={4}>
+						{t('guide_game_setup_text_4')}
+					</ParagraphWithNumber>
+					<ParagraphWithNumber number={5}>
+						{t('guide_game_setup_text_5')}
+					</ParagraphWithNumber>
+				</Section >
 				<Section title={t('guide_game_development_title')} icon={<RiAuctionFill className="text-2xl" />} >
 					<ParagraphWithArrow>
 						{t('guide_game_development_text_1')}
@@ -95,6 +87,9 @@ const HashibanInstructions = () => {
 					<ParagraphWithArrow>
 						{t('guide_game_development_text_3')}
 					</ParagraphWithArrow>
+					<div className="pl-12">
+						<List items={[t('guide_turn_action_1_title'), t('guide_turn_action_2_title'), t('guide_turn_action_3_title'), t('guide_turn_action_4_title')]} />
+					</div>
 					<ActionCard title={t('guide_turn_action_1_title')} number={1}>
 						<Paragraph>
 							{t('guide_turn_action_1_text')}
@@ -102,6 +97,9 @@ const HashibanInstructions = () => {
 						<DetailsSection>
 							<ParagraphWithArrow>
 								{t('guide_turn_action_1_disclaimer_1')}
+							</ParagraphWithArrow>
+							<ParagraphWithArrow>
+								{t('guide_turn_action_1_disclaimer_2')}
 							</ParagraphWithArrow>
 						</DetailsSection>
 					</ActionCard>
@@ -144,6 +142,11 @@ const HashibanInstructions = () => {
 						<Paragraph>
 							{t('guide_special_objects_weapon_text')}
 						</Paragraph>
+						<DetailsSection>
+							<ParagraphWithArrow>
+								{t('guide_special_objects_weapon_disclaimer_1')}
+							</ParagraphWithArrow>
+						</DetailsSection>
 					</CardWithTitleAndText>
 				</Section>
 				<Section title={t('guide_special_game_modes')} icon={<GiBlackBridge className="text-2xl" />}>
@@ -191,7 +194,19 @@ const ParagraphWithArrow = ({ children }) => (
 	</p>
 );
 
-const Number = ({ number }) => {
+const ParagraphWithNumber = ({ children, number }) => (
+	<p className="mb-4 text-lg flex gap-2 items-center">
+		<Number number={number} />
+		<div>
+			{children}
+		</div>
+	</p>
+);
+
+const Number = ({ number }) =>
+	<div className="flex flex-shrink-0 items-center justify-center h-8 w-8 mx-2 font-bold text-xl bg-blue-400 rounded-md">{number}</div>
+
+const Option = ({ number }) => {
 	const { t } = useTranslation();
 	return (<div className="py-2 px-3 font-bold text-xl bg-blue-400 rounded-md whitespace-nowrap">{t('guide_option')} {number}</div>)
 }
@@ -237,7 +252,7 @@ const CardWithTitleAndText = ({ title, children }) => (
 const ActionCard = ({ title, number, children }) => (
 	<div className="bg-white/10 rounded-md p-4 border-white/60 my-2">
 		<div className="flex gap-2 items-center mb-6">
-			<Number number={number} />
+			<Option number={number} />
 			<h2 className="text-xl font-bold">{title}</h2>
 		</div>
 		{children}
