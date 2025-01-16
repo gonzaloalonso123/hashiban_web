@@ -38,7 +38,7 @@ function ImageTop({ setLoaded }: imageTopProps) {
   return (
     <div id="image-top_flex">
       <div
-        className="image-top_section"
+        className="image-top_section w-full"
         style={{
           height: parentHeight,
         }}
@@ -87,7 +87,8 @@ const HeroText = () => {
   const { t } = useTranslation();
   return (
     <motion.div
-      className="w-4/5 max-w-[800px] z-20 mt-28 opacity-100 ml-96 invisible xl:visible"
+      className="w-4/5 max-w-[800px] z-20 opacity-100 invisible xl:visible"
+	  style={{marginTop: "15%", marginLeft: "25%"}}
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1, delay: 1 }}

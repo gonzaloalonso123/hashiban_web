@@ -20,7 +20,7 @@ export const VideoPlayer = () => {
 					className="w-full my-4 rounded-xl"
 					sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"
 					height="400"
-					src="https://www.youtube.com/embed/nX44-tZSAqY?rel=0&modestbranding=1&autoplay=1"
+					src="https://www.youtube.com/embed/4yalVQtYpjg?rel=0&modestbranding=1&autoplay=1"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 					allowFullScreen
 				></iframe>

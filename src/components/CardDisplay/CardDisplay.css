@@ -35,14 +35,14 @@
   transform: scale(1.05);
 }
 
-@media screen and (min-width: 1000px) {
+/* @media screen and (min-width: 1000px) {
   .container {
-    margin-left: 35%;
+    margin-left: calc(20% + 20px);
   }
   .description-carousel {
     height: 230px;
   }
-}
+} */
 
 .description {
   line-height: 1.2em;

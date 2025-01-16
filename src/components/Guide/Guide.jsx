@@ -23,7 +23,7 @@ const HashibanInstructions = () => {
 					className="w-full my-10 rounded-md"
 					sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"
 					height="400"
-					src="https://www.youtube.com/embed/nX44-tZSAqY?rel=0"
+					src="https://www.youtube.com/embed/4yalVQtYpjg?rel=0&modestbranding=1&autoplay=1"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 					allowFullScreen
 				></iframe>
@@ -160,6 +160,11 @@ const HashibanInstructions = () => {
 							{t('guide_special_game_modes_one_vs_one_text')}
 						</Paragraph>
 					</CardWithTitleAndText>
+				</Section>
+				<Section title={t('guide_deals_title')} icon={<GiCardBurn className="text-2xl" />}>
+					<Paragraph>
+						{t('guide_deals_text_1')}
+					</Paragraph>
 				</Section>
 				<Section title={t('guide_strategy_title')} icon={<MdTipsAndUpdates className="text-2xl" />}>
 					<CardWithTitleAndText>
