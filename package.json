@@ -20,13 +20,12 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-scroll-horizontal": "^1.6.6",
-    "tailwindcss": "^3.4.9",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-	"full-build": "npm run build && firebase deploy && git add . && git commit -m 'deploy' && git push",
+    "full-build": "npm run build && firebase deploy && git add . && git commit -m 'deploy' && git push",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -51,6 +50,7 @@
   },
   "devDependencies": {
     "@types/react": "^18.0.15",
-    "@types/react-dom": "^18.0.6"
+    "@types/react-dom": "^18.0.6",
+    "tailwindcss": "^3.4.17"
   }
 }
