@@ -12,23 +12,20 @@ const resources = {
   es: { translation: esTranslation },
 };
 
-const subdomains = domain.split(".");
-const countrycode = subdomains[subdomains.length];
-
 i18n.use(initReactI18next).init({
   resources,
-  lng: countrycode,
+  lng: domain === "hashiban.nl" ? "nl" : "es",
   fallbackLng: "es",
   interpolation: {
     escapeValue: false,
   },
 });
 
-switch (countrycode) {
-  case "nl":
+switch (domain) {
+  case "hashiban.nl":
     document.title = "De Veiling Van Hashiban";
     break;
-  case "es":
+  case "hashiban.tiranik.es":
     document.title = "La Subasta De Hashiban";
     break;
   default:
