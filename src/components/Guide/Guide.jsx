@@ -107,6 +107,14 @@ const HashibanInstructions = () => {
 						<Paragraph>
 							{t('guide_turn_action_2_text')}
 						</Paragraph>
+						<DetailsSection>
+							<ParagraphWithArrow>
+								{t('guide_turn_action_2_disclaimer_1')}
+							</ParagraphWithArrow>
+							<ParagraphWithArrow>
+								{t('guide_turn_action_2_disclaimer_2')}
+							</ParagraphWithArrow>
+						</DetailsSection>
 					</ActionCard>
 					<ActionCard title={t('guide_turn_action_3_title')} number={3}>
 						<Paragraph>
