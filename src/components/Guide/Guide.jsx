@@ -52,7 +52,7 @@ const HashibanInstructions = () => {
                 `19 ${t("guide_bills_of")} 1000`,
                 `15 ${t("guide_bills_of")} 2000`,
                 `10 ${t("guide_bills_of")} 5000`,
-                `1 ${t("guide_bills_of")} 10000 (${t(
+                `1 ${t("guide_bill_of")} 10000 (${t(
                   "guide_also_known_as_golden_token"
                 )})`,
               ]}
