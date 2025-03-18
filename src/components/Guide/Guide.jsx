@@ -101,7 +101,7 @@ const HashibanInstructions = () => {
           <ParagraphWithArrow>
             {t("guide_game_development_text_3")}
           </ParagraphWithArrow>
-          <div className="pl-12">
+          <div className="pl-12 mb-10">
             <List
               items={[
                 t("guide_turn_action_1_title"),

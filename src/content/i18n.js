@@ -14,8 +14,9 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: domain === "hashiban.nl" ? "nl" : "es",
-  fallbackLng: "es",
+  // lng: domain === "hashiban.nl" ? "nl" : "es",
+  lng: "nl",
+  fallbackLng: "nl",
   interpolation: {
     escapeValue: false,
   },
