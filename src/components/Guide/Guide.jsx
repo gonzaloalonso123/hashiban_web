@@ -31,7 +31,9 @@ const HashibanInstructions = () => {
           title={t("guide_objective_title")}
           icon={<SiTarget className="text-2xl" />}
         >
-          <Paragraph>{t("guide_objective_text")}</Paragraph>
+          <Paragraph>{t("guide_objective_text_1")}</Paragraph>
+          <Paragraph>{t("guide_objective_text_2")}</Paragraph>
+          <Paragraph>{t("guide_objective_text_3")}</Paragraph>
         </Section>
 
         <Section
