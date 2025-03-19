@@ -47,16 +47,14 @@ const HashibanInstructions = () => {
             <Paragraph>{t("guide_merchants_text")}</Paragraph>
           </GameComponentCard>
           <GameComponentCard title={t("guide_bills_title")} image={billete}>
-            <List
-              items={[
-                `19 ${t("guide_bills_of")} 1000`,
-                `15 ${t("guide_bills_of")} 2000`,
-                `10 ${t("guide_bills_of")} 5000`,
-                `1 ${t("guide_bill_of")} 10000 (${t(
-                  "guide_also_known_as_golden_token"
-                )})`,
-              ]}
-            />
+            <Paragraph>{`19 ${t("guide_bills_of")} 1000`}</Paragraph>
+            <Paragraph>{`15 ${t("guide_bills_of")} 2000`}</Paragraph>
+            <Paragraph>{`10 ${t("guide_bills_of")} 5000`}</Paragraph>
+            <Paragraph>
+              {`1 ${t("guide_bill_of")} 10000 (${t(
+                "guide_also_known_as_golden_token"
+              )})`}
+            </Paragraph>
           </GameComponentCard>
           <GameComponentCard title={t("guide_actions_title")} image={action}>
             <Paragraph>{t("guide_actions_text")}</Paragraph>
@@ -69,10 +67,25 @@ const HashibanInstructions = () => {
           title={t("guide_game_setup_title")}
           icon={<GiCardBurn className="text-2xl" />}
         >
-          <ParagraphWithNumber number={1}>
+          <ParagraphWithNumber
+            number={1}
+            title={t("guide_game_setup_step_1_title")}
+            items={[
+              t("guide_game_setup_step_1_point_1"),
+              t("guide_game_setup_step_1_point_2"),
+              t("guide_game_setup_step_1_point_3"),
+            ]}
+          >
             {t("guide_game_setup_text_1")}
           </ParagraphWithNumber>
-          <ParagraphWithNumber number={2}>
+          <ParagraphWithNumber
+            number={2}
+            title={t("guide_game_setup_step_2_title")}
+            items={[
+              t("guide_game_setup_step_2_point_1"),
+              t("guide_game_setup_step_2_point_2"),
+            ]}
+          >
             {t("guide_game_setup_text_2")}
           </ParagraphWithNumber>
           <DetailsSection>
@@ -80,15 +93,20 @@ const HashibanInstructions = () => {
               {t("guide_game_setup_disclaimer_1")}
             </ParagraphWithArrow>
           </DetailsSection>
-          <ParagraphWithNumber number={3}>
+          <ParagraphWithNumber
+            number={3}
+            title={t("guide_game_setup_step_3_title")}
+            items={[
+              t("guide_game_setup_step_3_point_1"),
+              t("guide_game_setup_step_3_point_2"),
+              t("guide_game_setup_step_3_point_3"),
+            ]}
+          >
             {t("guide_game_setup_text_3")}
           </ParagraphWithNumber>
-          <ParagraphWithNumber number={4}>
-            {t("guide_game_setup_text_4")}
-          </ParagraphWithNumber>
-          <ParagraphWithNumber number={5}>
-            {t("guide_game_setup_text_5")}
-          </ParagraphWithNumber>
+          <h1 className="text-xl text-center">
+            {t("guide_game_setup_let_the_auction_begin")}
+          </h1>
         </Section>
         <Section
           title={t("guide_game_development_title")}
@@ -103,7 +121,7 @@ const HashibanInstructions = () => {
           <ParagraphWithArrow>
             {t("guide_game_development_text_3")}
           </ParagraphWithArrow>
-          <div className="pl-12 mb-10">
+          <TabbedContainer>
             <List
               items={[
                 t("guide_turn_action_1_title"),
@@ -112,38 +130,125 @@ const HashibanInstructions = () => {
                 t("guide_turn_action_4_title"),
               ]}
             />
-          </div>
+          </TabbedContainer>
           <ActionCard title={t("guide_turn_action_1_title")} number={1}>
-            <Paragraph>{t("guide_turn_action_1_text")}</Paragraph>
+            <TabbedContainer>
+              <List
+                items={[
+                  t("guide_turn_action_1_point_1"),
+                  t("guide_turn_action_1_point_2"),
+                  t("guide_turn_action_1_point_3"),
+                  t("guide_turn_action_1_point_4"),
+                ]}
+              />
+            </TabbedContainer>
             <DetailsSection>
               <ParagraphWithArrow>
-                {t("guide_turn_action_1_disclaimer_1")}
+                {t("guide_turn_action_1_disclaimer_1_title")}
               </ParagraphWithArrow>
+              <TabbedContainer>
+                <List
+                  items={[
+                    t("guide_turn_action_1_disclaimer_1_point_1"),
+                    t("guide_turn_action_1_disclaimer_1_point_2"),
+                    t("guide_turn_action_1_disclaimer_1_point_3"),
+                    t("guide_turn_action_1_disclaimer_1_point_4"),
+                  ]}
+                />
+              </TabbedContainer>
+
               <ParagraphWithArrow>
-                {t("guide_turn_action_1_disclaimer_2")}
+                {t("guide_turn_action_1_disclaimer_2_title")}
               </ParagraphWithArrow>
+              <TabbedContainer>
+                <List
+                  items={[
+                    t("guide_turn_action_1_disclaimer_2_point_1"),
+                    t("guide_turn_action_1_disclaimer_2_point_2"),
+                  ]}
+                />
+              </TabbedContainer>
             </DetailsSection>
           </ActionCard>
           <ActionCard title={t("guide_turn_action_2_title")} number={2}>
             <Paragraph>{t("guide_turn_action_2_text")}</Paragraph>
+            <TabbedContainer>
+              <List
+                items={[
+                  t("guide_turn_action_2_point_1"),
+                  t("guide_turn_action_2_point_2"),
+                  t("guide_turn_action_2_point_3"),
+                ]}
+              />
+            </TabbedContainer>
             <DetailsSection>
               <ParagraphWithArrow>
-                {t("guide_turn_action_2_disclaimer_1")}
+                {t("guide_turn_action_2_disclaimer_1_title")}
+              </ParagraphWithArrow>
+              <TabbedContainer>
+                <List
+                  items={[
+                    t("guide_turn_action_2_disclaimer_1_point_1"),
+                    t("guide_turn_action_2_disclaimer_1_point_2"),
+                  ]}
+                />
+              </TabbedContainer>
+              <ParagraphWithArrow>
+                {t("guide_turn_action_2_disclaimer_2_title")}
               </ParagraphWithArrow>
               <ParagraphWithArrow>
-                {t("guide_turn_action_2_disclaimer_2")}
+                {t("guide_turn_action_2_disclaimer_3_title")}
               </ParagraphWithArrow>
             </DetailsSection>
           </ActionCard>
           <ActionCard title={t("guide_turn_action_3_title")} number={3}>
             <Paragraph>{t("guide_turn_action_3_text")}</Paragraph>
+            <TabbedContainer>
+              <List
+                items={[
+                  t("guide_turn_action_3_point_1"),
+                  t("guide_turn_action_3_point_2"),
+                  t("guide_turn_action_3_point_3"),
+                  t("guide_turn_action_3_point_4"),
+                ]}
+              />
+            </TabbedContainer>
           </ActionCard>
           <ActionCard title={t("guide_turn_action_4_title")} number={4}>
             <Paragraph>{t("guide_turn_action_4_text")}</Paragraph>
+            <TabbedContainer>
+              <List
+                items={[
+                  t("guide_turn_action_4_point_1"),
+                  t("guide_turn_action_4_point_2"),
+                  t("guide_turn_action_4_point_3"),
+                ]}
+              />
+            </TabbedContainer>
+            <Paragraph>{t("guide_turn_action_4_text_2")}</Paragraph>
+            <TabbedContainer>
+              <List items={[t("guide_turn_action_4_point_5")]} />
+            </TabbedContainer>
             <DetailsSection>
               <ParagraphWithArrow>
-                {t("guide_turn_action_4_disclaimer_1")}
+                {t("guide_turn_action_4_disclaimer_1_title")}
               </ParagraphWithArrow>
+              <TabbedContainer>
+                <List items={[t("guide_turn_action_4_disclaimer_1_point_1")]} />
+              </TabbedContainer>
+              <ParagraphWithArrow>
+                {t("guide_turn_action_4_disclaimer_2_title")}
+              </ParagraphWithArrow>
+              <TabbedContainer>
+                <List
+                  items={[
+                    t("guide_turn_action_4_disclaimer_2_point_1"),
+                    t("guide_turn_action_4_disclaimer_2_point_2"),
+                    t("guide_turn_action_4_disclaimer_2_point_3"),
+                    t("guide_turn_action_4_disclaimer_2_point_4"),
+                  ]}
+                />
+              </TabbedContainer>
             </DetailsSection>
           </ActionCard>
         </Section>
@@ -156,6 +261,16 @@ const HashibanInstructions = () => {
             icon={icono_accion}
           >
             <Paragraph>{t("guide_special_objects_action_text")}</Paragraph>
+            <TabbedContainer>
+              <List
+                items={[
+                  t("guide_special_objects_action_point_1"),
+                  t("guide_special_objects_action_point_2"),
+                  t("guide_special_objects_action_point_3"),
+                  t("guide_special_objects_action_point_4"),
+                ]}
+              />
+            </TabbedContainer>
             <DetailsSection>
               <ParagraphWithArrow>
                 {t("guide_special_objects_action_disclaimer_1")}
@@ -170,6 +285,25 @@ const HashibanInstructions = () => {
             title={t("guide_special_objects_weapon_title")}
           >
             <Paragraph>{t("guide_special_objects_weapon_text")}</Paragraph>
+            <TabbedContainer>
+              <List
+                items={[
+                  t("guide_special_objects_weapon_point_1"),
+                  t("guide_special_objects_weapon_point_2"),
+                  t("guide_special_objects_weapon_point_3"),
+                ]}
+              />
+            </TabbedContainer>
+            <Paragraph>{t("guide_special_objects_weapon_text_2")}</Paragraph>
+            <TabbedContainer>
+              <List
+                items={[
+                  t("guide_special_objects_weapon_point_4"),
+                  t("guide_special_objects_weapon_point_5"),
+                  t("guide_special_objects_weapon_point_6"),
+                ]}
+              />
+            </TabbedContainer>
             <DetailsSection>
               <ParagraphWithArrow>
                 {t("guide_special_objects_weapon_disclaimer_1")}
@@ -201,6 +335,23 @@ const HashibanInstructions = () => {
           icon={<GiCardBurn className="text-2xl" />}
         >
           <Paragraph>{t("guide_deals_text_1")}</Paragraph>
+          <TabbedContainer>
+            <List
+              items={[
+                t("guide_deals_point_1"),
+                t("guide_deals_point_2"),
+                t("guide_deals_point_3"),
+              ]}
+            />
+          </TabbedContainer>
+          <DetailsSection>
+            <ParagraphWithArrow>
+              {t("guide_deals_disclaimer_1")}
+            </ParagraphWithArrow>
+            <TabbedContainer>
+              <List items={[t("guide_deals_disclaimer_1_point_1")]} />
+            </TabbedContainer>
+          </DetailsSection>
         </Section>
         <Section
           title={t("guide_strategy_title")}
@@ -210,12 +361,37 @@ const HashibanInstructions = () => {
             <ParagraphWithArrow>
               {t("guide_strategy_text_1")}
             </ParagraphWithArrow>
+            <TabbedContainer>
+              <List
+                items={[
+                  t("guide_strategy_point_1"),
+                  t("guide_strategy_point_2"),
+                  t("guide_strategy_point_3"),
+                ]}
+              />
+            </TabbedContainer>
             <ParagraphWithArrow>
               {t("guide_strategy_text_2")}
             </ParagraphWithArrow>
+            <TabbedContainer>
+              <List
+                items={[
+                  t("guide_strategy_point_4"),
+                  t("guide_strategy_point_5"),
+                ]}
+              />
+            </TabbedContainer>
             <ParagraphWithArrow>
               {t("guide_strategy_text_3")}
             </ParagraphWithArrow>
+            <TabbedContainer>
+              <List
+                items={[
+                  t("guide_strategy_point_6"),
+                  t("guide_strategy_point_7"),
+                ]}
+              />
+            </TabbedContainer>
             <ParagraphWithArrow>
               {t("guide_strategy_text_4")}
             </ParagraphWithArrow>
@@ -226,21 +402,28 @@ const HashibanInstructions = () => {
   );
 };
 
+const TabbedContainer = ({ children }) => {
+  return <div className="px-12">{children}</div>;
+};
+
 const Paragraph = ({ children }) => {
   return <p className="mb-4 text-lg">{children}</p>;
 };
 
 const ParagraphWithArrow = ({ children }) => (
-  <p className="mb-4 text-lg flex gap-2">
-    <span className="text-3xl"> ➜</span>
+  <p className="text-lg flex gap-2 items-start">
+    <span className="text-3xl -translate-y-1">➜</span>
     {children}
   </p>
 );
 
-const ParagraphWithNumber = ({ children, number }) => (
-  <p className="mb-4 text-lg flex gap-2 items-center">
-    <Number number={number} />
-    <div>{children}</div>
+const ParagraphWithNumber = ({ items, title, number }) => (
+  <p className="mb-4 text-lg gap-2 items-center">
+    <div className="flex gap-2 items-center">
+      <Number number={number} />
+      <h2>{title}</h2>
+    </div>
+    <TabbedContainer>{items && <List items={items} />}</TabbedContainer>
   </p>
 );
 
@@ -273,7 +456,7 @@ const MediumTitle = ({ children }) => {
 
 const List = ({ items }) => {
   return (
-    <ul className="list-disc list-inside my-2">
+    <ul className="list-disc my-2 space-y-2 list-outside">
       {items.map((item) => (
         <li className="text-lg">{item}</li>
       ))}
