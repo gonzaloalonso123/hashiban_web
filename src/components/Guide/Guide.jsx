@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import billete from "../../images/billete.png";
-import plant from "../../images/libro_objeto_slider.png";
-import mercader_botanica from "../../images/mercader_plantas.png";
-import action from "../../images/action.png";
+import plant from "../../images/libro_objeto_slider_nl.png";
+import mercader_botanica from "../../images/mercader_plantas_nl.png";
+import action from "../../images/action_nl.png";
 import { SiTarget } from "react-icons/si";
 import { IoExtensionPuzzle } from "react-icons/io5";
 import { GiBlackBridge } from "react-icons/gi";
@@ -47,14 +47,22 @@ const HashibanInstructions = () => {
             <Paragraph>{t("guide_merchants_text")}</Paragraph>
           </GameComponentCard>
           <GameComponentCard title={t("guide_bills_title")} image={billete}>
-            <Paragraph>{`19 ${t("guide_bills_of")} 1000`}</Paragraph>
-            <Paragraph>{`15 ${t("guide_bills_of")} 2000`}</Paragraph>
-            <Paragraph>{`10 ${t("guide_bills_of")} 5000`}</Paragraph>
-            <Paragraph>
-              {`1 ${t("guide_bill_of")} 10000 (${t(
-                "guide_also_known_as_golden_token"
-              )})`}
-            </Paragraph>
+            <div>
+              <Paragraph className="mb-0">{`19 ${t(
+                "guide_bills_of"
+              )} 1000`}</Paragraph>
+              <Paragraph className="mb-0">{`15 ${t(
+                "guide_bills_of"
+              )} 2000`}</Paragraph>
+              <Paragraph className="mb-0">{`10 ${t(
+                "guide_bills_of"
+              )} 5000`}</Paragraph>
+              <Paragraph className="mb-0">
+                {`1 ${t("guide_bill_of")} 10000 (${t(
+                  "guide_also_known_as_golden_token"
+                )})`}
+              </Paragraph>
+            </div>
           </GameComponentCard>
           <GameComponentCard title={t("guide_actions_title")} image={action}>
             <Paragraph>{t("guide_actions_text")}</Paragraph>
@@ -312,25 +320,6 @@ const HashibanInstructions = () => {
           </CardWithTitleAndText>
         </Section>
         <Section
-          title={t("guide_special_game_modes")}
-          icon={<GiBlackBridge className="text-2xl" />}
-        >
-          <CardWithTitleAndText
-            title={t("guide_special_game_modes_revelader_merchant_title")}
-          >
-            <Paragraph>
-              {t("guide_special_game_modes_revelader_merchant_text")}
-            </Paragraph>
-          </CardWithTitleAndText>
-          <CardWithTitleAndText
-            title={t("guide_special_game_modes_one_vs_one_title")}
-          >
-            <Paragraph>
-              {t("guide_special_game_modes_one_vs_one_text")}
-            </Paragraph>
-          </CardWithTitleAndText>
-        </Section>
-        <Section
           title={t("guide_deals_title")}
           icon={<GiCardBurn className="text-2xl" />}
         >
@@ -352,6 +341,35 @@ const HashibanInstructions = () => {
               <List items={[t("guide_deals_disclaimer_1_point_1")]} />
             </TabbedContainer>
           </DetailsSection>
+        </Section>
+        <Section
+          title={t("guide_special_game_modes")}
+          icon={<GiBlackBridge className="text-2xl" />}
+        >
+          <CardWithTitleAndText
+            title={t("guide_special_game_modes_revelader_merchant_title")}
+          >
+            <TabbedContainer>
+              <List
+                items={[
+                  t("guide_special_game_modes_revelader_merchant_point_1"),
+                  t("guide_special_game_modes_revelader_merchant_point_2"),
+                ]}
+              />
+            </TabbedContainer>
+          </CardWithTitleAndText>
+          <CardWithTitleAndText
+            title={t("guide_special_game_modes_one_vs_one_title")}
+          >
+            <TabbedContainer>
+              <List
+                items={[
+                  t("guide_special_game_modes_one_vs_one_point_1"),
+                  t("guide_special_game_modes_one_vs_one_point_2"),
+                ]}
+              />
+            </TabbedContainer>
+          </CardWithTitleAndText>
         </Section>
         <Section
           title={t("guide_strategy_title")}
@@ -392,9 +410,9 @@ const HashibanInstructions = () => {
                 ]}
               />
             </TabbedContainer>
-            <ParagraphWithArrow>
+            <h1 className="text-xl text-center mt-10">
               {t("guide_strategy_text_4")}
-            </ParagraphWithArrow>
+            </h1>
           </CardWithTitleAndText>
         </Section>
       </div>
@@ -406,8 +424,8 @@ const TabbedContainer = ({ children }) => {
   return <div className="px-12">{children}</div>;
 };
 
-const Paragraph = ({ children }) => {
-  return <p className="mb-4 text-lg">{children}</p>;
+const Paragraph = ({ className, children }) => {
+  return <p className={`mb-4 text-lg ${className}`}>{children}</p>;
 };
 
 const ParagraphWithArrow = ({ children }) => (
@@ -510,7 +528,7 @@ const SectionTitle = ({ icon, children }) => (
 );
 
 const DetailsSection = ({ children }) => (
-  <div className="border border-yellow-200 p-2 pt-8 rounded-md relative my-8">
+  <div className="border border-yellow-200 p-2 py-8 rounded-md relative my-8">
     {children}
   </div>
 );
