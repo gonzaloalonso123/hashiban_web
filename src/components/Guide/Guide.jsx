@@ -47,22 +47,14 @@ const HashibanInstructions = () => {
             <Paragraph>{t("guide_merchants_text")}</Paragraph>
           </GameComponentCard>
           <GameComponentCard title={t("guide_bills_title")} image={billete}>
-            <div>
-              <Paragraph className="mb-0">{`19 ${t(
-                "guide_bills_of"
-              )} 1000`}</Paragraph>
-              <Paragraph className="mb-0">{`15 ${t(
-                "guide_bills_of"
-              )} 2000`}</Paragraph>
-              <Paragraph className="mb-0">{`10 ${t(
-                "guide_bills_of"
-              )} 5000`}</Paragraph>
-              <Paragraph className="mb-0">
-                {`1 ${t("guide_bill_of")} 10000 (${t(
-                  "guide_also_known_as_golden_token"
-                )})`}
-              </Paragraph>
-            </div>
+            <p className="text-lg">{`19 ${t("guide_bills_of")} 1000`}</p>
+            <p className="text-lg">{`15 ${t("guide_bills_of")} 2000`}</p>
+            <p className="text-lg">{`10 ${t("guide_bills_of")} 5000`}</p>
+            <p className="text-lg">
+              {`1 ${t("guide_bill_of")} 10000 (${t(
+                "guide_also_known_as_golden_token"
+              )})`}
+            </p>
           </GameComponentCard>
           <GameComponentCard title={t("guide_actions_title")} image={action}>
             <Paragraph>{t("guide_actions_text")}</Paragraph>
@@ -120,25 +112,27 @@ const HashibanInstructions = () => {
           title={t("guide_game_development_title")}
           icon={<RiAuctionFill className="text-2xl" />}
         >
-          <ParagraphWithArrow>
-            {t("guide_game_development_text_1")}
-          </ParagraphWithArrow>
-          <ParagraphWithArrow>
-            {t("guide_game_development_text_2")}
-          </ParagraphWithArrow>
-          <ParagraphWithArrow>
-            {t("guide_game_development_text_3")}
-          </ParagraphWithArrow>
-          <TabbedContainer>
-            <List
-              items={[
-                t("guide_turn_action_1_title"),
-                t("guide_turn_action_2_title"),
-                t("guide_turn_action_3_title"),
-                t("guide_turn_action_4_title"),
-              ]}
-            />
-          </TabbedContainer>
+          <div className="my-6">
+            <ParagraphWithArrow>
+              {t("guide_game_development_text_1")}
+            </ParagraphWithArrow>
+            <ParagraphWithArrow>
+              {t("guide_game_development_text_2")}
+            </ParagraphWithArrow>
+            <ParagraphWithArrow>
+              {t("guide_game_development_text_3")}
+            </ParagraphWithArrow>
+            <TabbedContainer>
+              <List
+                items={[
+                  t("guide_turn_action_1_title"),
+                  t("guide_turn_action_2_title"),
+                  t("guide_turn_action_3_title"),
+                  t("guide_turn_action_4_title"),
+                ]}
+              />
+            </TabbedContainer>
+          </div>
           <ActionCard title={t("guide_turn_action_1_title")} number={1}>
             <TabbedContainer>
               <List
@@ -469,7 +463,7 @@ const BigTitle = ({ children }) => {
 };
 
 const MediumTitle = ({ children }) => {
-  return <h2 className="text-xl font-semibold mt-6">{children}</h2>;
+  return <h2 className="text-xl font-semibold">{children}</h2>;
 };
 
 const List = ({ items }) => {
@@ -528,7 +522,7 @@ const SectionTitle = ({ icon, children }) => (
 );
 
 const DetailsSection = ({ children }) => (
-  <div className="border border-yellow-200 p-2 py-8 rounded-md relative my-8">
+  <div className="border border-yellow-200 p-2 py-8 rounded-md relative my-8 flex flex-col gap-3">
     {children}
   </div>
 );
