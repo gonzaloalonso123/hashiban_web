@@ -33,7 +33,6 @@ const HashibanInstructions = () => {
         >
           <Paragraph>{t("guide_objective_text_1")}</Paragraph>
           <Paragraph>{t("guide_objective_text_2")}</Paragraph>
-          <Paragraph>{t("guide_objective_text_3")}</Paragraph>
         </Section>
 
         <Section
@@ -47,14 +46,16 @@ const HashibanInstructions = () => {
             <Paragraph>{t("guide_merchants_text")}</Paragraph>
           </GameComponentCard>
           <GameComponentCard title={t("guide_bills_title")} image={billete}>
-            <p className="text-lg">{`19 ${t("guide_bills_of")} 1000`}</p>
-            <p className="text-lg">{`15 ${t("guide_bills_of")} 2000`}</p>
-            <p className="text-lg">{`10 ${t("guide_bills_of")} 5000`}</p>
-            <p className="text-lg">
-              {`1 ${t("guide_bill_of")} 10000 (${t(
-                "guide_also_known_as_golden_token"
-              )})`}
-            </p>
+            <div>
+              <p className="text-lg">{`19 ${t("guide_bills_of")} 1000`}</p>
+              <p className="text-lg">{`15 ${t("guide_bills_of")} 2000`}</p>
+              <p className="text-lg">{`10 ${t("guide_bills_of")} 5000`}</p>
+              <p className="text-lg">
+                {`1 ${t("guide_bill_of")} 10000 (${t(
+                  "guide_also_known_as_golden_token"
+                )})`}
+              </p>
+            </div>
           </GameComponentCard>
           <GameComponentCard title={t("guide_actions_title")} image={action}>
             <Paragraph>{t("guide_actions_text")}</Paragraph>
@@ -104,9 +105,9 @@ const HashibanInstructions = () => {
           >
             {t("guide_game_setup_text_3")}
           </ParagraphWithNumber>
-          <h1 className="text-xl text-center">
+          <ExclamationText>
             {t("guide_game_setup_let_the_auction_begin")}
-          </h1>
+          </ExclamationText>
         </Section>
         <Section
           title={t("guide_game_development_title")}
@@ -281,6 +282,9 @@ const HashibanInstructions = () => {
                 {t("guide_special_objects_action_disclaimer_2")}
               </ParagraphWithArrow>
             </DetailsSection>
+            <ExclamationText>
+              {t("guide_special_objects_action_text_2")}
+            </ExclamationText>
           </CardWithTitleAndText>
           <CardWithTitleAndText
             icon={icono_arma}
@@ -404,9 +408,7 @@ const HashibanInstructions = () => {
                 ]}
               />
             </TabbedContainer>
-            <h1 className="text-xl text-center mt-10">
-              {t("guide_strategy_text_4")}
-            </h1>
+            <ExclamationText>{t("guide_strategy_text_4")}</ExclamationText>
           </CardWithTitleAndText>
         </Section>
       </div>
@@ -525,6 +527,10 @@ const DetailsSection = ({ children }) => (
   <div className="border border-yellow-200 p-2 py-8 rounded-md relative my-8 flex flex-col gap-3">
     {children}
   </div>
+);
+
+const ExclamationText = ({ children }) => (
+  <h1 className="text-xl text-center my-10">{children}</h1>
 );
 
 export default HashibanInstructions;
