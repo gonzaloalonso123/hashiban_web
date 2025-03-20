@@ -315,6 +315,9 @@ const HashibanInstructions = () => {
                 {t("guide_special_objects_weapon_disclaimer_1")}
               </ParagraphWithArrow>
             </DetailsSection>
+            <ExclamationText>
+              {t("guide_special_objects_weapon_text_3")}
+            </ExclamationText>
           </CardWithTitleAndText>
         </Section>
         <Section
