@@ -106,7 +106,7 @@
   "guide_turn_action_4_text_2": "Ventajas de un mercader revelado:",
   "guide_turn_action_4_point_5": "Desde el momento en que un jugador ha revelado un mercader, ese jugador puede tomar directamente un billete del mazo de billetes cada vez que se subaste un objeto de la categoría que desea este mercader. Esto se aplica tanto a la opción 1: 'Subastar Objeto' como a la opción 2: 'Ofrecer Lote a Subasta'.",
   "guide_turn_action_4_disclaimer_1_title": "Regla especial:",
-  "guide_turn_action_4_disclaimer_1_point_1": "Un jugador que revela un mercader no recibe billetes si él mismo subasta un objeto con una categoría deseada de ese mercader como parte de un lote (opción 2: Ofrecer Lote a Subasta).",
+  "guide_turn_action_4_disclaimer_1_point_1": "Un jugador que revela un mercader no recibe billetes si él mismo subasta un objeto con la categoría deseada de ese mercader como parte de un lote (opción 2: Ofrecer Lote a Subasta).",
   "guide_turn_action_4_disclaimer_2_title": "¿Varios mercaderes en un turno?",
   "guide_turn_action_4_disclaimer_2_point_1": "Un jugador solo puede revelar varios mercaderes en el mismo turno si hay objetos con categorías superpuestas.",
   "guide_turn_action_4_disclaimer_2_point_2": "Por ejemplo: la Enciclopedia Botánica pertenece a las categorías de plantas y libros. Un jugador puede usar este objeto para revelar tanto al mercader de plantas como al mercader de libros. En este caso, el jugador puede mostrar 5 objetos y así revelar dos mercaderes a la vez.",
