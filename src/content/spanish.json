@@ -97,7 +97,7 @@
   "guide_turn_action_3_point_1": "El jugador paga 5 billetes de 1000 y los coloca en el fondo del mazo de billetes.",
   "guide_turn_action_3_point_2": "El jugador revelar los 5 billetes superiores del mazo de billetes.",
   "guide_turn_action_3_point_3": "El jugador puede quedarse con cada par de billetes idénticos que robe. Si el token dorado se encuentra entre los billetes robados, el jugador también puede quedársela.",
-  "guide_turn_action_3_point_4": "Por ejemplo: si el jugador roba 3 billetes de 2000, un billete de 5000 y la token dorado, se lleva 2 billetes de 2000 y el token dorado.",
+  "guide_turn_action_3_point_4": "Por ejemplo: si el jugador rvela 3 billetes de 2000, un billete de 5000 y la token dorado, se lleva 2 billetes de 2000 y el token dorado.",
   "guide_turn_action_4_title": "Revelar Mercader",
   "guide_turn_action_4_text": "Un jugador puede revelar un mercader mostrando 3 objetos que coincidan con las categorías deseadas de ese mercader.",
   "guide_turn_action_4_point_1": "El jugador muestra 3 objetos que coinciden con el mercader.",
