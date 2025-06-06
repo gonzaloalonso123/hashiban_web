@@ -168,7 +168,7 @@ const HashibanInstructions = () => {
       <div className="max-w-4xl p-4 mx-auto">
         <h1 className="text-3xl font-bold text-center mb-6">{t("guide_first_title")}</h1> {/* Centered and margin */}
         {/* iframe placeholder - ensure src is valid or remove if not used */}
-        {/* <iframe
+        <iframe
           title="Instructional Video" // Added title for accessibility
           className="w-full my-10 rounded-md aspect-video" // Added aspect-video
           sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"
@@ -176,7 +176,7 @@ const HashibanInstructions = () => {
           src="https://www.youtube.com/embed/4yalVQtYpjg?rel=0&modestbranding=1&autoplay=1" // Replace with actual video URL
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-        ></iframe> */}
+        ></iframe>
         <Section title={t("guide_objective_title")} icon={<SiTarget className="text-2xl" />}>
           <Paragraph>{t("guide_objective_text_1")}</Paragraph>
           <Paragraph>{t("guide_objective_text_2")}</Paragraph>
